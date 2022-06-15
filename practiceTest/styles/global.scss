@@ -1,0 +1,155 @@
+#practice-test * {
+  font-weight: normal;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: none !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body#practice-test {
+  background: url('/images/backgrounds/bg-pt.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $black;
+  font-family: 'mont_r';
+  font-size: 1.6rem;
+  line-height: 1.2;
+
+  &.--hidden-overflow {
+    overflow: hidden;
+  }
+
+  b,
+  strong {
+    font-family: 'mont_b' !important;
+  }
+
+  button {
+    font-family: 'mont_m';
+    font-size: 1.6rem !important;
+    line-height: 1;
+  }
+
+  ol,
+  ul {
+    list-style-type: none;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  u {
+    text-decoration: underline !important;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  .__fireworks {
+    width: 100vw;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+    right: unset;
+    z-index: 1;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .global-loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+
+    .rs-loader {
+      &-backdrop {
+        background: rgba($color: $black, $alpha: 0.4);
+      }
+    }
+  }
+
+  .ReactCollapse--collapse {
+    transition: height 0.25s ease-in-out;
+  }
+
+  .rs {
+    &-btn-loading {
+      pointer-events: all;
+    }
+
+    &-loader {
+      &-spin {
+        &::before {
+          border: none;
+        }
+        &::after {
+          border: 0.5rem solid $white;
+          border-left: 0.5rem solid transparent;
+        }
+      }
+
+      &-content {
+        color: $white;
+        font-family: 'mont_m';
+        font-size: 1.8rem !important;
+      }
+    }
+  }
+
+  .--break {
+    margin-bottom: 2rem;
+  }
+
+  #home {
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+
+    .home__container {
+      height: 100%;
+      padding: 0 0 3.2rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+[data-animate='fade-in'] {
+  animation: animate-fade-in;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+[data-animate='fade-up'] {
+  animation: animate-fade-up;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+[data-animate='fade-left'] {
+  animation: animate-fade-left;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+[data-animate='fade-right'] {
+  animation: animate-fade-right;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}

@@ -1,0 +1,272 @@
+.pt-o-game-10 {
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > .__left {
+      width: 42vh;
+      max-width: 38rem;
+      height: 42vh;
+      max-height: 38rem;
+      border-radius: 14vh 0 0 14vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      & > .__player {
+        width: 12.8rem;
+        height: 12.8rem;
+      }
+
+      & > .__duration {
+        color: $dodgerBlue;
+        font-family: "mont_sb";
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    & > .__right {
+      width: max(calc(100% - 42vh), 72%);
+      max-width: 80rem;
+      height: 100%;
+      position: relative;
+
+      & > .__tapescript {
+        min-width: 17.6rem;
+        height: 4.6rem;
+        background: linear-gradient($deepSkyBlue, $dodgerBlue);
+        border-radius: 2.3rem;
+        color: $white;
+        font-family: "mont_b";
+        font-size: 1.8rem !important;
+        position: absolute;
+        bottom: 1.2rem;
+        left: max(-21vh, -19rem);
+        transform: translateX(-50%);
+
+        &:active {
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          width: 17.6rem;
+          height: 4.6rem;
+          background: $deepSkyBlue;
+          border-radius: 2.3rem;
+          color: $white;
+          content: "Tapescript";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "mont_b";
+          font-size: 1.8rem;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      &.--image {
+        .pt-o-block-bottom-gradient-with-header {
+          &__content {
+            height: 65%;
+            padding-top: 17.5vh;
+            position: relative;
+
+            .__image-instruction {
+              width: 100%;
+              height: 20vh;
+              cursor: zoom-in;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, -25%);
+
+              .pt-a-image {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          & > .__heading {
+            color: $white;
+            font-family: "mont_m";
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        &__content {
+          padding: 3.2rem 1.6rem 3.2rem 3.2rem;
+
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0 3.2rem 0 0;
+                color: $gunPowder;
+                font-family: "mont_m";
+                font-size: 1.8rem;
+                line-height: 3.6rem;
+
+                & > .__content {
+                  position: relative;
+
+                  & > .__editable {
+                    min-width: 13rem;
+                    border-bottom: 0.2rem solid $cornflower;
+                    color: $dodgerBlue;
+                    display: inline;
+                    text-align: center;
+
+                    &.--empty {
+                      display: inline-block;
+                    }
+
+                    &.--danger {
+                      color: $salmon;
+                    }
+
+                    &.--success {
+                      color: $limeGreen;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(3) {
+                & > div {
+                  background: $pattensBlue !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & > .__paper {
+      width: 64.2rem;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      pointer-events: all !important;
+      position: relative;
+
+      &.--hidden {
+        display: none;
+      }
+
+      & > .__toggle {
+        width: 1.6rem;
+        height: 1.6rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.8rem;
+        right: 3.6rem;
+        z-index: 2;
+        transform: rotate(45deg);
+      }
+
+      .__pin.--right {
+        display: none;
+      }
+
+      .__content {
+        u {
+          text-decoration: underline !important;
+        }
+
+        i {
+          font-style: italic !important;
+        }
+
+        b {
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pt-o-game-10 {
+    &__container {
+      flex-direction: column;
+      & > .__left {
+        width: 100%;
+        height: 25%;
+        max-width: unset;
+        max-height: unset;
+        border-radius: unset;
+        flex-direction: column;
+        overflow: unset;
+        & > .__player {
+          width: 7rem;
+          height: 7rem;
+        }
+
+        & > .__duration {
+          position: relative;
+          bottom: 0;
+          transform: unset;
+          left: unset;
+          font-size: 2rem;
+        }
+      }
+      & > .__right {
+        width: 100%;
+        height: 100%;
+        .pt-o-block-bottom-gradient-with-header {
+          &__header {
+            padding: 0.5rem;
+            & > .__heading {
+              font-size: 1.3rem;
+            }
+          }
+          &__content {
+            padding: 1rem;
+            bottom: 2rem;
+            & > div {
+              & > div {
+                &:nth-child(1) {
+                  padding: 0;
+                  font-size: 1.4rem;
+                  line-height: 2.6rem;
+                }
+              }
+            }
+          }
+        }
+
+        &.--image {
+          .pt-o-block-bottom-gradient-with-header {
+            &__content {
+              height: 66%;
+              padding-top: 9rem;
+              .__image-instruction {
+                height: 12rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

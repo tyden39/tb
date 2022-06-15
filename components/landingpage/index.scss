@@ -1,0 +1,101 @@
+.landing-page {
+    font-family: Inter;
+    font-size: 14px;
+    background: 
+                linear-gradient(220.47deg, #9696D8 -5.4%, #5050B3 101.27%) no-repeat;
+    background-size: 100% 100vh;
+    background-color: #F1F1F9;
+
+  &__wrapper {
+    margin: 0 auto;
+  }
+}
+
+.landing-wrapper {
+  width: 100%;
+  max-width: 122rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+
+  @include horizontal-tablet {
+    max-width: 122rem;
+  }
+
+  @include vertical-tablet {
+    max-width: 900px;
+  }
+
+    @include horizontal-mobile {
+        max-width: 900px;
+    }
+
+    @include vertical-mobile {
+        max-width: 500px;
+    }
+}
+
+@keyframes moveDown {
+  from {
+    top: -100px;
+    opacity: 0.5;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveRight {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeftAgain {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveRightAgain {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    top: -100px;
+    opacity: 0.5;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

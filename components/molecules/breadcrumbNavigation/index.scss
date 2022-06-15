@@ -1,0 +1,29 @@
+.m-breadcrumb-navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .rs {
+        &-breadcrumb {
+            margin: 0;
+            &-item {
+                color: $dark;
+                font-size: 1.6rem;
+                transition: color 0.25s;
+                &:hover {
+                    color: $success;
+                    opacity: 1;
+                    text-decoration: underline !important;
+                }
+                &-active {
+                    color: $success;
+                    font-weight: 900;
+                    opacity: 1;
+                    pointer-events: none;
+                }
+            }
+            &-separator {
+                color: $dark_l;
+            }
+        }
+    }
+}

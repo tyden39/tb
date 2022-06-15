@@ -1,0 +1,19 @@
+.pt-o-tests {
+  padding: 2rem 10.2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__list {
+    width: calc(50% - 2rem);
+    margin: 0 1rem;
+
+    &:nth-child(2n) {
+      margin: 0 0 2.4rem 2rem;
+    }
+
+    & > .__item {
+      width: calc(100% + 1rem);
+      margin: 0 0 2.4rem -1rem;
+    }
+  }
+}

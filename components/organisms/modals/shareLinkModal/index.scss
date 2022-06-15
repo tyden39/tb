@@ -1,0 +1,94 @@
+.o-share-link-modal {
+  width: 44rem;
+  margin: 0 auto;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+
+  .rs-modal {
+    &-dialog {
+      width: 100%;
+    }
+
+    &-body {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .modal-header {
+    padding: 4.8rem 0 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    img {
+      width: 12rem;
+      height: 12rem;
+
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .modal-title {
+      margin: 1rem 0 0 0;
+
+      color: #374352;
+      font-size: 2.8rem;
+      line-height: 3.8rem;
+    }
+
+    .modal-description {
+      margin: 0.8rem 0 0 0;
+      padding: 0 2.4rem;
+
+      color: #374352;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  .modal-content {
+    position: relative;
+
+    margin-top: 2.4rem;
+
+    display: flex;
+    align-items: center;
+
+    .input-copy {
+      flex: 1;
+    }
+
+    .modal-noti {
+      position: absolute;
+      top: calc(100% + 0.8rem);
+      left: 0;
+
+      color: #71ac5d;
+      font-size: 1.2rem;
+    }
+  }
+
+  .modal-footer {
+    margin-top: 3.2rem;
+    text-align: center;
+
+    .rs-btn {
+      min-width: 34.4rem;
+      height: 4.8rem;
+      margin-left: 1.2rem;
+
+      background: #6262bc;
+      border-radius: 1.2rem;
+
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.pt-o-block-wave {
+  width: 100%;
+  height: 100%;
+  background: $pattensBlue;
+  position: relative;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    background: url('/pt/images/backgrounds/bg-wave.png');
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    background-position: right center;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+}

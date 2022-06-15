@@ -1,0 +1,227 @@
+.landing-about {
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+
+  color: white;
+
+  background-image: url(/images/landingpage/ellipse-top.png),
+    url(/images/landingpage/about.png),
+    url(/images/landingpage/ellipse-bottom.png);
+  background-position: right top, 101% 50%, left bottom;
+  background-repeat: no-repeat;
+  background-size: auto, 50% auto, auto;
+
+  @keyframes icon {
+    0% {
+      background-position: right top, 101% 50%, left bottom;
+    }
+    50% {
+      background-position: right top, 101% 50%, left bottom;
+    }
+    100% {
+      background-position: right top, 101% 50%, left bottom;
+    }
+  }
+
+  @include horizontal-tablet {
+    background-position: right -5%, right 8rem, left bottom;
+    background-size: 26%, 60%, auto 53%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  @include vertical-tablet {
+    background-position: right -5%, right 8rem, left bottom;
+    background-size: 26%, 80%, auto 53%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__image-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+
+    @media (max-width: 414px) {
+      display: block;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    text-align: right;
+
+    position: absolute;
+    right: 0;
+
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+
+    img {
+      margin-top: 20px;
+      @include desktop-sm {
+        max-width: 70%;
+        top: 20px;
+      }
+    }
+  }
+
+  &__content {
+    width: 60%;
+    position: relative;
+    animation-name: moveRight;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    // padding-right: 10rem;
+
+    @include horizontal-mobile {
+      padding-right: 0;
+    }
+
+    // @media (max-width: 414px) {
+    @include horizontal-tablet {
+      width: 100%;
+      top: 20vh;
+    }
+
+    @include horizontal-mobile {
+      width: 100%;
+      // top: 12rem;
+    }
+
+    @media only screen and (max-height: 375px) {
+      top: 1rem;
+    }
+
+    // img {
+    //   position: absolute;
+    //   top: -1em;
+    //   left: 22em;
+    // }
+
+    &__title {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+
+      @media (max-width: 991px) {
+        margin: 0;
+        font-size: 5.8rem;
+      }
+      @media (max-width: 720px) {
+        font-size: 2.8rem;
+      }
+      @media (max-width: 414px) {
+        font-size: 2.8rem;
+      }
+
+      @media screen and (max-height: 680px) {
+        font-size: 3rem;
+      }
+
+      @media screen and (max-height: 568px) {
+        font-size: 3rem;
+        line-height: 1.2;
+
+        &:nth-child(2) {
+          margin-bottom: .8rem
+        }
+      }
+    }
+
+    &__description {
+      font-weight: 400;
+      margin-top: 24px;
+      line-height: 24px;
+      text-align: justify;
+      padding-right: 10rem;
+
+      @include horizontal-tablet {
+        font-size: 1.8rem;
+        padding-right: 0;
+        line-height: 2.8rem;
+      }
+
+      @include horizontal-mobile {
+        padding-right: 0;
+      }
+
+      @include vertical-mobile {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-height: 765px) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 1.5rem 0 0 0;
+      }
+
+      @media screen and (max-height: 568px) {
+        margin: 0;
+      }
+    }
+
+    &__button {
+      margin-top: 34px;
+      background-color: #35b9e5;
+      width: 200px;
+      justify-content: center;
+
+      @include horizontal-tablet {
+        font-size: 1.8rem;
+      }
+
+      @include vertical-mobile {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-height: 765px) {
+        margin-top: 1.2rem !important;
+      }
+
+      @media screen and (max-width: 1199px) {
+        margin: 3.4rem auto;
+      }
+    }
+  }
+
+  &__bottom-icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.landing-highlight {
+  display: inline-block;
+  // padding: 0 63px 9px 0;
+  color: #39c9f9;
+  font-family: Caveat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 56px;
+  position: relative;
+
+  img {
+    margin-left: -1.5rem;
+    height: 7rem;
+
+    @media only screen and (max-width: 414px) {
+      height: 4.7rem;
+    }
+
+    @media only screen and (max-height: 450px) {
+      height: 4.7rem;
+      margin-bottom: -1.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    font-size: 3.6rem;
+    padding: 0;
+  }
+}

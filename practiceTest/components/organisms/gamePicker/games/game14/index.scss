@@ -1,0 +1,398 @@
+.pt-o-game-14 {
+  height: 100%;
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > .__paper {
+      width: 64.2rem;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      position: relative;
+      &.--hidden {
+        display: none;
+      }
+      & > .__toggle {
+        width: 1.6rem;
+        height: 1.6rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.8rem;
+        right: 3.6rem;
+        z-index: 2;
+        transform: rotate(45deg);
+      }
+      .__pin.--right {
+        display: none;
+      }
+      .__content {
+        u {
+          text-decoration: underline !important;
+        }
+        i {
+          font-style: italic !important;
+        }
+        b {
+          font-weight: bold !important;
+        }
+      }
+    }
+    & > .__left {
+      width: 42vh;
+      max-width: 38rem;
+      height: 42vh;
+      max-height: 38rem;
+      border-radius: 14vh 0 0 14vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      & > .__player {
+        width: 12.8rem;
+        height: 12.8rem;
+      }
+      & > .__duration {
+        color: $dodgerBlue;
+        font-family: 'mont_sb';
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    & > .__right {
+      width: calc(100% - 42vh);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      & > .__tapescript {
+        min-width: 17.6rem;
+        height: 4.6rem;
+        background: linear-gradient($deepSkyBlue, $dodgerBlue);
+        border-radius: 2.3rem;
+        color: $white;
+        font-family: 'mont_b';
+        font-size: 1.8rem !important;
+        position: absolute;
+        bottom: 1.2rem;
+        left: max(-21vh, -19rem);
+        transform: translateX(-50%);
+        &:active {
+          &::before {
+            opacity: 1;
+          }
+        }
+        &::before {
+          width: 17.6rem;
+          height: 4.6rem;
+          background: $deepSkyBlue;
+          border-radius: 2.3rem;
+          color: $white;
+          content: 'Tapescript';
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'mont_b';
+          font-size: 1.8rem;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      & > .__header {
+        padding: 2.1rem 6.4rem;
+        & > .__heading {
+          color: $gunPowder;
+          font-family: 'mont_m';
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+        }
+      }
+      & > .__content {
+        margin: 0 0 1.2rem 0;
+        flex: 1;
+        & > .__top {
+          height: 50%;
+          padding: 1.2rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          & > div {
+            & > div {
+              &:nth-child(2),
+              &:nth-child(3) {
+                display: none;
+              }
+            }
+          }
+          .__table {
+            min-height: unset;
+            width: 100%;
+            height: 100%;
+            padding: 0 10rem;
+            position: relative;
+            z-index: 2;
+            & > .__image-instruction {
+              width: 100%;
+              height: 100%;
+              cursor: zoom-in;
+            }
+            & > .__thead {
+              & > .__tr {
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-end;
+                & > .__th {
+                  padding: 1.2rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  &:first-child {
+                    border-radius: 1.2rem 0 0 0;
+                  }
+                  &:last-child {
+                    border-radius: 0 1.2rem 0 0;
+                  }
+                  &:nth-child(2n + 1) {
+                    background: $mayaBlue;
+                  }
+                  &:nth-child(2n) {
+                    background: $dodgerBlue;
+                  }
+                  & > .__heading {
+                    color: $white;
+                    font-family: 'mont_sb';
+                    font-size: 1.6rem;
+                    line-height: 1.8rem;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+            & > .__tbody {
+              & > .__tr {
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-end;
+                &.--last-tr {
+                  & > .__td {
+                    &:first-child {
+                      border-radius: 0 0 0 1.2rem;
+                    }
+                    &:last-child {
+                      border-radius: 0 0 1.2rem 0;
+                    }
+                  }
+                }
+                & > .__td {
+                  padding: 1.2rem;
+                  background: $white;
+                  border-top: 0.1rem solid $lightSkyBlue;
+                  border-left: 0.1rem solid $lightSkyBlue;
+                  color: $gunPowder;
+                  font-family: 'mont_m';
+                  font-size: 1.6rem;
+                  line-height: 1.9rem;
+                  display: flex;
+                  align-items: center;
+                  b {
+                    color: $dodgerBlue;
+                  }
+                }
+              }
+            }
+          }
+          & > .__background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            & > .__image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        & > .__bottom {
+          height: 50%;
+          padding: 1.8rem 10rem;
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                & > .__list {
+                  display: flex;
+                  justify-content: center;
+                  & > .__left {
+                    width: 50%;
+                    padding: 0 2.2rem 0 0;
+                  }
+                  & > .__right {
+                    width: 50%;
+                    padding: 0 0 0 2.2rem;
+                  }
+                  .__input-item {
+                    margin: 0 0 0.8rem 0;
+                    display: flex;
+                    align-items: center;
+                    & > label {
+                      width: 3.2rem;
+                      margin: 0 1.1rem 0 0;
+                      color: $dodgerBlue;
+                      display: block;
+                      font-family: 'mont_m';
+                      font-size: 1.6rem;
+                      line-height: 1.9rem;
+                    }
+                    & > input {
+                      width: calc(100% - 4.3rem);
+                      height: 6rem;
+                      padding: 0 2rem;
+                      background: $aliceBlue;
+                      border: 0.2rem solid $aliceBlue;
+                      border-radius: 1.2rem;
+                      color: $dodgerBlue;
+                      font-family: 'mont_b';
+                      font-size: 1.8rem;
+                      transition: all 0.25s ease-in-out;
+                      &:disabled {
+                        cursor: default !important;
+                      }
+                      &::placeholder {
+                        color: $cornflower;
+                        font-family: 'mont_m';
+                      }
+                      &.--primary {
+                        border-color: $dodgerBlue !important;
+                      }
+                      &.--danger {
+                        border-color: $salmon !important;
+                        color: $salmon;
+                      }
+                      &.--success {
+                        border-color: $limeGreen !important;
+                        color: $limeGreen;
+                      }
+                      &:hover {
+                        border-color: $lightSkyBlue;
+                      }
+                    }
+                  }
+                }
+              }
+              &:nth-child(2),
+              &:nth-child(3) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pt-o-game-14 {
+    &__container {
+      flex-direction: column;
+      overflow: auto;
+      height: unset;
+      & > .__left {
+        width: 100%;
+        max-width: unset;
+        max-height: unset;
+        height: 8rem;
+        border-radius: unset;
+        flex-direction: column;
+        overflow: unset;
+        & > .__player {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        & > .__duration {
+          position: relative;
+          bottom: 0;
+          transform: unset;
+          left: unset;
+          font-size: 2rem;
+        }
+      }
+      & > .__right {
+        width: 100%;
+        height: unset;
+        & > .__header {
+          padding: 0.5rem 1rem;
+          & > .__heading {
+            font-size: 1.4rem;
+          }
+        }
+        & > .__content {
+          & > .__top {
+            height: unset;
+            padding: 0;
+            .__table {
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              position: relative;
+              z-index: 2;
+              & > .__image-instruction {
+                width: 100%;
+                height: 100%;
+                cursor: zoom-in;
+              }
+            }
+          }
+          & > .__bottom {
+            height: 20rem;
+            padding: 1rem;
+            & > div {
+              & > div {
+                &:nth-child(1) {
+                  & > .__list {
+                    & > .__left {
+                      width: 50%;
+                      padding: 0 1rem 0 0;
+                    }
+                    & > .__right {
+                      width: 50%;
+                      padding: 0 0 0 1rem;
+                    }
+                    .__input-item {
+                      margin: 0 0 0.8rem 0;
+                      & > label {
+                        width: 3.2rem;
+                        margin: 0 0.2rem 0 0;
+                        font-size: 1.2rem;
+                      }
+                      & > input {
+                        width: calc(100% - 3rem);
+                        height: 4rem;
+                        padding: 0 2rem;
+                        font-size: 1.2rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

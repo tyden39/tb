@@ -1,0 +1,498 @@
+.pt-o-game-8 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__left {
+    width: 55%;
+    height: 100%;
+
+    .__content {
+      color: $nightRider;
+      font-family: "mont_m";
+      font-size: 1.8rem;
+      line-height: 3.6rem;
+    }
+  }
+
+  &__right {
+    width: 42%;
+    height: 100%;
+
+    & > .__container {
+      height: 100%;
+      padding: 3.2rem 1.8rem 4.4rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+
+      & > .__header {
+        margin: 0 1.6rem 3.2rem 1.6rem;
+
+        & > .__description {
+          color: $gunPowder;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+        }
+      }
+
+      & > .__content {
+        margin: 0 -1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        & > .__list {
+          flex: 1;
+
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0 2.4rem 0 0;
+              }
+
+              &:nth-child(3) {
+                & > div {
+                  background: $pattensBlue !important;
+                }
+              }
+            }
+          }
+
+          .__item {
+            margin: 0 0 0.8rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            &:nth-child(2n + 1) {
+              & > .__text {
+                background: $aliceBlue;
+              }
+            }
+
+            &:nth-child(2n) {
+              & > .__text {
+                background: $aliceBlue_sb;
+              }
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+
+            & > .__text {
+              margin: 0 0 0 0.8rem;
+              color: $gunPowder;
+              flex: 1;
+              padding: 1.1rem 1.6rem;
+              border-radius: 1.2rem;
+              font-family: "mont_m";
+              transition: color 0.25s ease-in-out;
+
+              &.--danger {
+                color: $salmon;
+              }
+
+              &.--success {
+                color: $limeGreen;
+              }
+            }
+
+            & > .__toggle {
+              width: 15.3rem;
+              display: flex;
+              justify-content: center;
+
+              .rs-toggle {
+                .rs-toggle-presentation {
+                  background: $salmon;
+                }
+              }
+
+              .rs-toggle-checked {
+                .rs-toggle-presentation {
+                  background: $kellyGreen;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-audio {
+    &__container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > .__paper {
+        width: 64.2rem;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        position: relative;
+
+        &.--hidden {
+          display: none;
+        }
+
+        & > .__toggle {
+          width: 1.6rem;
+          height: 1.6rem;
+          cursor: pointer;
+          position: absolute;
+          top: 1.8rem;
+          right: 3.6rem;
+          z-index: 2;
+          transform: rotate(45deg);
+          .rs-toggle {
+            .rs-toggle-presentation {
+              background: $salmon;
+            }
+          }
+
+          .rs-toggle-checked {
+            .rs-toggle-presentation {
+              background: $kellyGreen;
+            }
+          }
+        }
+
+        .__pin.--right {
+          display: none;
+        }
+      }
+    }
+
+    &__left {
+      width: 42vh;
+      max-width: 38rem;
+      height: 42vh;
+      max-height: 38rem;
+      border-radius: 14vh 0 0 14vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      & > .__player {
+        width: 12.8rem;
+        height: 12.8rem;
+      }
+
+      & > .__duration {
+        color: $dodgerBlue;
+        font-family: "mont_sb";
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__right {
+      width: 42%;
+      height: 100%;
+      position: relative;
+
+      & > .__tapescript {
+        min-width: 17.6rem;
+        height: 4.6rem;
+        background: linear-gradient($deepSkyBlue, $dodgerBlue);
+        border-radius: 2.3rem;
+        color: $white;
+        font-family: "mont_b";
+        font-size: 1.8rem !important;
+        position: absolute;
+        bottom: 1.2rem;
+        left: max(-21vh, -19rem);
+        transform: translateX(-50%);
+
+        &:active {
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          width: 17.6rem;
+          height: 4.6rem;
+          background: $deepSkyBlue;
+          border-radius: 2.3rem;
+          color: $white;
+          content: "Tapescript";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "mont_b";
+          font-size: 1.8rem;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      & > .__container {
+        height: 100%;
+        padding: 3.2rem 1.8rem 4.4rem 1.8rem;
+        display: flex;
+        flex-direction: column;
+
+        & > .__header {
+          margin: 0 1.6rem 3.2rem 1.6rem;
+
+          & > .__description {
+            color: $gunPowder;
+            font-family: "mont_m";
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            text-align: center;
+          }
+        }
+
+        & > .__content {
+          margin: 0 -1rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          & > .__list {
+            flex: 1;
+
+            & > div {
+              & > div {
+                &:nth-child(1) {
+                  padding: 0 2.4rem 0 0;
+                }
+
+                &:nth-child(3) {
+                  & > div {
+                    background: $pattensBlue !important;
+                  }
+                }
+              }
+            }
+
+            .__item {
+              margin: 0 0 0.8rem 0;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+
+              &:nth-child(2n + 1) {
+                & > .__text {
+                  background: $aliceBlue;
+                }
+              }
+
+              &:nth-child(2n) {
+                & > .__text {
+                  background: $aliceBlue_sb;
+                }
+              }
+
+              &:last-child {
+                margin: 0;
+              }
+
+              & > .__text {
+                margin: 0 0 0 0.8rem;
+                color: $gunPowder;
+                flex: 1;
+                padding: 1.1rem 1.6rem;
+                border-radius: 1.2rem;
+                font-family: "mont_m";
+                transition: color 0.25s ease-in-out;
+
+                &.--danger {
+                  color: $salmon;
+                }
+
+                &.--success {
+                  color: $limeGreen;
+                }
+              }
+
+              & > .__toggle {
+                width: 15.3rem;
+                display: flex;
+                justify-content: center;
+                .rs-toggle {
+                  .rs-toggle-presentation {
+                    background: $salmon;
+                  }
+                }
+  
+                .rs-toggle-checked {
+                  .rs-toggle-presentation {
+                    background: $kellyGreen;
+                  }
+                }
+
+                & > .__switcher {
+                  // width: 8.1rem;
+                  // height: 3.2rem;
+                  // background: $salmon;
+                  // border-radius: 1.6rem;
+
+                  &.rs-btn-toggle-checked {
+                    background: $limeGreen;
+
+                    &::after {
+                      margin-left: calc(100% - 3.2rem);
+                    }
+
+                    .rs-btn-toggle-inner {
+                      margin-left: 1.6rem;
+                    }
+                  }
+
+                  &::after {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    border-radius: 50%;
+                    top: 0.2rem;
+                    left: 0.2rem;
+                  }
+
+                  .rs-btn-toggle-inner {
+                    margin-left: 4.4rem;
+                  }
+
+                  .rs-icon {
+                    font-size: 1.6rem;
+                    line-height: 3.2rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pt-o-game-8 {
+    flex-direction: row;
+    overflow: auto;
+    &__left {
+      width: 100%;
+      height: 40%;
+      & > .__container {
+        & > .pt-o-block-cloud__container {
+          padding: 2rem;
+        }
+      }
+      .pt-o-block-paper {
+        padding: 3rem 1.5rem 1rem 1.5rem;
+        .__pin.--right {
+          top: 1rem;
+        }
+        .__pin.--left {
+          top: 1rem;
+        }
+      }
+      .__content {
+        color: $nightRider;
+        font-family: "mont_m";
+        font-size: 1.4rem;
+        line-height: 3.6rem;
+      }
+    }
+    &__right {
+      width: 100%;
+      height: 100%;
+      & > .__container {
+        padding: 1rem;
+        & > .__header {
+          margin: 0;
+          & > .__description {
+            font-size: 1.4rem;
+          }
+        }
+        & > .__content {
+          margin: 1rem;
+          & > .__list {
+            .__item {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-audio {
+      &__container {
+        flex-direction: column;
+      }
+      &__left {
+        width: 100%;
+        height: 25%;
+        max-width: unset;
+        max-height: unset;
+        border-radius: unset;
+        flex-direction: column;
+        overflow: unset;
+        & > .__player {
+          width: 7rem;
+          height: 7rem;
+        }
+
+        & > .__duration {
+          position: relative;
+          bottom: 0;
+          transform: unset;
+          left: unset;
+          font-size: 2rem;
+        }
+      }
+      &__right {
+        width: 100%;
+        height: 100%;
+        
+        .pt-o-block-bottom-gradient {
+          padding: 1.2rem;
+          .__header {
+            margin: 0;
+            & > .__description {
+              font-size: 1.4rem;
+            }
+          }
+          .__content {
+            & > .__list {
+              flex: 1;
+              & > div {
+                & > div {
+                  &:nth-child(1) {
+                  }
+                }
+              }
+
+              .__item {
+                & > .__text {
+                  font-size: 1.3rem;
+                }
+                & > .__toggle {
+                  width: 8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

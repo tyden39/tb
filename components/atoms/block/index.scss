@@ -1,0 +1,34 @@
+.a-block {
+    background: $white;
+    border: 0.1rem solid $light;
+    .__content {
+        margin: 1.6rem 0 0 0;
+    }
+    &-title {
+        height: 5rem;
+        padding: 0 1.6rem;
+        border-bottom: 0.1rem solid $light;
+        color: $dark;
+        display: flex;
+        align-items: center;
+        position: relative;
+        h5 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .__arrow {
+            position: absolute;
+            top: 50%;
+            right: 1.6rem;
+            transition: transform 0.25s;
+        }
+        .__delete {
+            color: $danger;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 5rem;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+}

@@ -1,0 +1,159 @@
+.p-templates {
+  &__breadcrumb {
+    padding: 0.8rem 0;
+  }
+
+  &__filter {
+    margin: 1.6rem 0 0 0;
+
+    display: flex;
+
+    .__left {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .__main-box {
+      max-width: 25.2rem;
+      margin: 0 0.8rem 1.6rem 0;
+
+      flex: 1;
+    }
+
+    .__filter-box {
+      width: 12%;
+      max-width: 15rem;
+      margin: 0 0.8rem 1.6rem 0;
+    }
+
+    .__sub-btn {
+      height: 4rem;
+      margin: 0 0.8rem 1.6rem 0;
+      padding: 0 1.6rem;
+
+      display: flex;
+      align-items: center;
+
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 0.1rem 0.4rem rgba(115, 132, 152, 0.2);
+
+      color: #526375;
+      font-size: 1.4rem;
+      font-weight: 500;
+
+      img {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 0.8rem 0 0;
+
+        display: block;
+
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .__badge {
+        position: relative;
+
+        &[data-hidden="true"] {
+          &::before {
+            display: none;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: -0.5rem;
+          right: 0rem;
+
+          width: 1.4rem;
+          height: 1.4rem;
+
+          background: #c96851;
+          border: 0.1rem solid #fff;
+          border-radius: 50%;
+
+          color: #fff;
+          content: attr(data-value);
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+
+    .__main-btn {
+      height: 4rem;
+      margin: 0 0.8rem 1.6rem 0;
+      padding: 0 1.6rem;
+
+      display: flex;
+      align-items: center;
+
+      background: #5cb9d8;
+      border-radius: 1rem;
+      box-shadow: none;
+
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 500;
+
+      img {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 0.8rem 0 0;
+
+        object-fit: contain;
+        object-position: center;
+
+        filter: brightness(5);
+      }
+    }
+
+    .rs-btn {
+      &[data-active="true"] {
+        background: #d5dee8;
+
+        .__badge {
+          &::before {
+            border-color: #d5dee8;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    height: 100%;
+    padding-bottom: 1.6rem;
+
+    .templates-table {
+      .add-btn {
+        background: #1ab394;
+        color: #fff;
+        font-weight: 600;
+
+        .add-icon {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin: 0 0 0 1.2rem;
+        }
+      }
+    }
+  }
+
+  &.create-temlate {
+    .__header-btn {
+      margin: 0 0 1.6rem 0;
+      padding: 0 1.6rem;
+
+      & > .__btn {
+        background: $success;
+        color: $white;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

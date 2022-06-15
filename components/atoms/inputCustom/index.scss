@@ -1,0 +1,165 @@
+.a-input-custom {
+  position: relative;
+
+  height: 4rem;
+
+  &[data-exist='true'] {
+    label {
+      top: -1rem;
+      left: -1rem;
+
+      color: #6868ac;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  &[data-icon='true'] {
+    &[data-icon-placement='end'] {
+      .a-input-custom__icon {
+        left: unset;
+        right: 1.6rem;
+      }
+
+      label {
+        left: 0.1rem;
+      }
+
+      input {
+        padding: 0 4.4rem 0 1.6rem;
+      }
+
+      &[data-exist='true'] {
+        label {
+          left: 1.2rem;
+        }
+      }
+    }
+
+    label {
+      left: 3.2rem;
+    }
+
+    &[data-exist='true'] {
+      label {
+        left: 4.4rem;
+      }
+    }
+
+    input {
+      padding: 0 1.6rem 0 4.4rem;
+
+      &:focus {
+        & ~ label {
+          left: 4.4rem;
+        }
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0 1.2rem;
+
+    background: #fff;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #d5dee8;
+
+    font-family: 'inter';
+    font-size: 1.4rem;
+
+    transition: border 0.25s;
+
+    &:disabled {
+      color: #c5c6c7 !important;
+
+      + label {
+        color: #c5c6c7;
+      }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    /* Firefox */
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
+
+    &:focus {
+      border-color: #6868ac;
+
+      & ~ label {
+        top: -1rem;
+        left: -1rem;
+
+        color: #6868ac;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .input-error {
+    border: 0.1rem solid #ad4d34;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 0.1rem;
+
+    padding: 0 1.2rem;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    transform: translateY(-50%);
+
+    transition: all 0.25s;
+
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: calc(50% + 0.025rem);
+
+      content: '';
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 1.6rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}

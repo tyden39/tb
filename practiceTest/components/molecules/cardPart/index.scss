@@ -1,0 +1,38 @@
+.pt-m-card-part {
+  width: 100%;
+  min-height: 6.4rem;
+  padding: 1rem 2.4rem;
+  background: $solitude;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+
+  &__info {
+    width: calc(100% - 8rem);
+
+    & > .__label {
+      color: $airForceBlue;
+      font-family: "mont_m";
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+    & > .__name {
+      margin: 0.5rem 0 0 0;
+      color: $gunPowder;
+      font-family: "mont_m";
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__point {
+    width: 8rem;
+
+    & > .__point {
+      color: $dodgerBlue;
+      font-family: "mont_sb";
+      line-height: 1.9rem;
+    }
+  }
+}

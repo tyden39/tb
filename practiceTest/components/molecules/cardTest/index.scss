@@ -1,0 +1,138 @@
+.pt-m-card-test {
+  &.--orange {
+    .pt-m-card-test__toggle {
+      &::before {
+        background: linear-gradient(-45deg, $kournikova, $darkOrange);
+      }
+
+      &:hover {
+        box-shadow: 0 5rem 10rem rgba($color: $darkOrange, $alpha: 0.15);
+      }
+    }
+  }
+
+  &.--purple {
+    .pt-m-card-test__toggle {
+      &::before {
+        background: linear-gradient(-45deg, $heliotrope, $mediumPurple);
+      }
+
+      &:hover {
+        box-shadow: 0 5rem 10rem rgba($color: $mediumPurple, $alpha: 0.15);
+      }
+    }
+  }
+
+  &.--green {
+    .pt-m-card-test__toggle {
+      &::before {
+        background: linear-gradient(-45deg, $mediumAquamarine, $darkTurquoise);
+      }
+
+      &:hover {
+        box-shadow: 0 5rem 10rem rgba($color: $darkTurquoise, $alpha: 0.15);
+      }
+    }
+  }
+
+  &.--disabled {
+    .pt-m-card-test__toggle {
+      background: rgba($color: $white, $alpha: 0.5);
+      backdrop-filter: blur(4.5rem);
+
+      &::before {
+        opacity: 0.45;
+      }
+
+      &:hover {
+        box-shadow: unset;
+      }
+
+      & > .__banner {
+        opacity: 0.45;
+      }
+
+      & > .__name {
+        color: #5c84ac;
+      }
+    }
+  }
+
+  &__toggle {
+    min-height: 9.6rem;
+    padding: 0 2.2rem 0 1.2rem;
+    background: white;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    transition: box-shadow 0.25s ease-in-out;
+
+    &::before {
+      width: 1.2rem;
+      height: 100%;
+      background: linear-gradient(-45deg, $aqua, $dodgerBlue);
+      border-radius: 1.2rem 0 0 1.2rem;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 5rem 10rem rgba($color: $dodgerBlue, $alpha: 0.15);
+    }
+
+    & > .__banner {
+      width: 10rem;
+      padding-top: 10rem !important;
+      transform: translate(-15%, 15%);
+      margin-right: -10%;
+    }
+
+    & > .__name {
+      width: calc(70% - 6rem);
+      padding: 0 1.6rem 0 3.2rem;
+      color: $gunPowder;
+      font-family: "mont_sb";
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+
+    & > .__btn {
+      width: 30%;
+      height: 4.6rem;
+      background: linear-gradient($deepSkyBlue, $dodgerBlue_sb);
+      border-radius: 2.3rem;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "mont_b";
+
+      &.--locked {
+        background: transparent;
+        color: #5c84ac;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        font-family: "mont_sb";
+
+        & > .pt-a-image {
+          width: 2.4rem;
+          height: 2.4rem;
+          margin: 0 0 0 0.5rem;
+          padding-top: 0;
+          transform: translateY(-0.25rem);
+        }
+      }
+
+      &:active {
+        background: $deepSkyBlue;
+        color: $white;
+      }
+    }
+  }
+}

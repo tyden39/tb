@@ -1,0 +1,334 @@
+.l-landing-footer {
+  background-color: #313572;
+  padding: 4.2rem 0;
+  width: 100%;
+
+  a{
+    color: $white;
+  }
+
+  &__side {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+  }
+
+  &__icon-dtp {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.6rem auto auto auto;
+  }
+
+  &__title-company {
+    margin: 1.6rem auto auto auto;
+
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: -0.2px;
+
+    @media only screen and (max-width: 845px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__left-side {
+    width: 446px;
+  }
+
+  &__icon {
+    margin: 0 1.3rem 0 0;
+  }
+
+  &__icon-location {
+    margin: auto 2rem 2rem auto;
+  }
+
+  &__contact {
+    display: flex;
+
+    margin: 0.8rem auto auto auto;
+    line-height: normal !important;
+    letter-spacing: -0.2px;
+  }
+
+  &__address {
+    display: inline-flex;
+
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.2px;
+  }
+
+  &__right-side {
+  }
+
+  &__form-title {
+    font-size: 1.6rem;
+  }
+
+  &__form-input {
+    margin: 2rem auto;
+  }
+
+  &__input-email {
+    width: 493px;
+    height: 48px;
+    background: #f5f8fc;
+
+    border: 0.1rem solid #d5dee8;
+    box-sizing: border-box;
+    border-radius: 0.8rem;
+
+    padding: 0 2rem;
+
+    color: $black;
+  }
+
+  input::placeholder {
+    font-family: 'inter';
+    font-size: 1.6rem;
+    color: $dark;
+  }
+
+  &__before-submit {
+    display: block;
+
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0.6rem;
+  }
+
+  &__submit-email {
+    width: 111px;
+    height: 44px;
+
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    border: none;
+    border-radius: 0.6rem;
+    outline: none;
+    cursor: pointer;
+    background: #6262bc;
+    transition: width 0.35s ease-in-out, background 0.35s ease-in-out;
+
+    &:hover {
+      animation: bnbounce 4s infinite;
+      cursor: pointer;
+
+      input::placeholder {
+        display: none;
+
+        font-family: 'inter';
+      }
+    }
+  }
+
+  @keyframes bnbounce {
+    5%,
+    50% {
+      transform: scale(1);
+    }
+
+    10% {
+      transform: scale(1);
+    }
+
+    15% {
+      transform: scale(1);
+    }
+
+    20% {
+      transform: scale(1) rotate(-5deg);
+    }
+
+    25% {
+      transform: scale(1) rotate(5deg);
+    }
+
+    30% {
+      transform: scale(1) rotate(-3deg);
+    }
+
+    35% {
+      transform: scale(1) rotate(2deg);
+    }
+
+    40% {
+      transform: scale(1) rotate(0);
+    }
+  }
+
+  &__subscription {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    margin: 0.8rem auto;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @keyframes gelatine {
+    from,
+    to {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+  }
+
+  .youtube {
+    animation: gelatine 0.5s infinite;
+  }
+
+  .facebook {
+    animation: gelatine 0.5s infinite;
+  }
+
+  &__copyright {
+    text-align: center;
+    margin: 3.6rem auto auto auto;
+    padding-bottom: 1.2rem;
+    span {
+      font-size: 1.4rem;
+      color: #9292d6;
+    }
+  }
+}
+
+@media only screen and (max-width: 551px) {
+  .l-landing-footer {
+    width: 100%;
+    padding: 0;
+
+    &__side {
+      display: inline-block !important;
+    }
+
+    &__title-company {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .l-landing-footer {
+    width: 100%;
+    padding: 0;
+
+    &__side {
+      display: inline-block !important;
+    }
+
+    &__icon-dtp {
+      margin: 0;
+      img {
+        margin: 4.8rem 0 4rem 0;
+      }
+    }
+
+    &__title-company {
+    }
+
+    &__left-side {
+      width: 100%;
+      margin: auto auto 5.2rem auto;
+    }
+
+    &__icon {
+    }
+
+    &__icon-location {
+      margin: 0 2rem 0 0;
+    }
+
+    &__contact {
+    }
+
+    &__address {
+      font-size: 1.8rem;
+    }
+
+    &__right-side {
+    }
+
+    &__submit-email {
+    }
+
+    &__input-email {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .l-landing-footer {
+    width: 100%;
+    padding: 0;
+
+    &__side {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__icon-dtp {
+      margin: auto;
+      img {
+        margin: 4.8rem 0 4rem 0;
+      }
+    }
+
+    &__title-company {
+      font-size: 2.2rem;
+    }
+
+    &__left-side {
+      width: 100%;
+      margin: auto 5.2rem 5.2rem auto;
+    }
+
+    &__icon {
+    }
+
+    &__icon-location {
+      margin: 0 2rem 0 0;
+    }
+
+    &__contact {
+    }
+
+    &__address {
+    }
+
+    &__right-side {
+      width: 100%;
+    }
+
+    &__input-email {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    input::placeholder {
+      font-size: 1.4rem;
+    }
+  }
+}

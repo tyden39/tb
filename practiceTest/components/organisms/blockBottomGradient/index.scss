@@ -1,0 +1,148 @@
+.pt-o-block-bottom-gradient {
+  width: 100%;
+  height: 100%;
+  background: $white;
+  border-radius: 1.2rem;
+  position: relative;
+
+  &::before {
+    width: 100%;
+    height: 1.2rem;
+    background: linear-gradient(-90deg, $aqua, $dodgerBlue);
+    border-radius: 0 0 1.2rem 1.2rem;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-with-header {
+    width: 100%;
+    height: 100%;
+    background: $white;
+    border-radius: 1.2rem;
+    position: relative;
+
+    &.--sm-header {
+      .pt-o-block-bottom-gradient {
+        &-with-header {
+          &__header {
+            height: calc(32% - 3.2rem);
+          }
+
+          &__content {
+            height: calc(72% + 3.2rem);
+          }
+        }
+      }
+    }
+
+    &::before {
+      width: 100%;
+      height: 1.2rem;
+      background: linear-gradient(-90deg, $aqua, $dodgerBlue);
+      border-radius: 0 0 1.2rem 1.2rem;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__header {
+      width: 100%;
+      height: 34%;
+      padding: 3.2rem;
+      background: linear-gradient($mayaBlue, $dodgerBlue);
+      border-radius: 1.2rem 1.2rem 0 0;
+      text-align: center;
+    }
+
+    &__content {
+      width: calc(100% - 4rem);
+      height: 72%;
+      padding: 3.2rem 0.6rem 3.2rem 8.8rem;
+      background: $white;
+      border-radius: 4rem;
+      box-shadow: 0 1.2rem 4rem rgba($color: $dodgerBlue, $alpha: 0.2);
+      position: absolute;
+      bottom: 3.4rem;
+      left: 2rem;
+    }
+  }
+}
+
+@include desktop-md {
+  .pt-o-block-bottom-gradient {
+    &-with-header {
+      &.--sm-header {
+        .pt-o-block-bottom-gradient {
+          &-with-header {
+            &__header {
+              height: calc(32% - 1.6rem);
+              padding-top: 1rem;
+            }
+
+            &__content {
+              height: calc(72% + 1.6rem);
+            }
+          }
+        }
+      }
+
+      &__header {
+        padding: 2.4rem 3.2rem;
+      }
+    }
+  }
+}
+
+@include desktop-sm {
+  .pt-o-block-bottom-gradient {
+    &-with-header {
+      &.--sm-header {
+        .pt-o-block-bottom-gradient {
+          &-with-header {
+            &__header {
+              height: 32%;
+            }
+
+            &__content {
+              height: 72%;
+            }
+          }
+        }
+      }
+
+      &__header {
+        padding: 1.6rem 3.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pt-o-block-bottom-gradient {
+    &-with-header {
+      &.--sm-header {
+        .pt-o-block-bottom-gradient {
+          &-with-header {
+            &__header {
+              height: 32%;
+            }
+
+            &__content {
+              height: inherit;
+              padding-bottom: 10rem;
+            }
+          }
+        }
+      }
+
+      &__header {
+        padding: 0 3.2rem;
+      }
+    }
+  }
+}

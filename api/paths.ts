@@ -1,0 +1,16 @@
+export const paths = {
+  api_questions: '/api/questions',
+  api_questions_search: '/api/questions/search',
+  api_questions_import: '/api/questions/import',
+  api_questions_upload: '/api/questions/upload',
+  api_templates: '/api/templates',
+  api_templates_origin_create: '/api/templates/origin-create-template',
+  api_templates_search: '/api/templates/search',
+  api_users: '/api/users',
+  api_users_register: '/api/users/register',
+  api_users_user_exist: '/api/users/user-exist',
+  api_users_forgot_password: '/api/users/forgot-password',
+  api_users_otp: '/api/users/otp',
+  api_users_roles: '/api/users/roles',
+  api_unit_test: '/api/unit-test',
+}

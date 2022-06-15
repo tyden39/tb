@@ -1,0 +1,120 @@
+.pt-o-test-footer {
+  width: 100%;
+  height: 4.8rem;
+  position: relative;
+  z-index: 2;
+  transition: margin 0.25s ease-in-out;
+
+  &__pagination {
+    width: calc(100% - 24rem);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__direction {
+    min-width: 12rem;
+    height: 4.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: right 0.25s ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .pt-o-test-footer {
+    // height: 10rem;
+    position: relative;
+    // bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 1.2rem -1.6rem;
+    &__pagination {
+      width: unset;
+      height: unset;
+      position: unset;
+      top: unset;
+      left: unset;
+      transform: unset;
+    }
+    &__direction {
+      display: flex;
+      min-width: unset;
+      height: unset;
+      position: unset;
+      top: unset;
+      right: unset;
+    }
+  }
+}
+
+// @media only screen and (min-width: 768px) and (max-width: 992px) {
+//   .pt-o-test-footer {
+//     position: absolute;
+//     bottom: 3.6rem;
+//     left: 0;
+//   }
+// }
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .pt-o-test-footer {
+    position: absolute;
+    bottom: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 0 -1.6rem;
+    &__pagination {
+      width: unset;
+      height: unset;
+      position: unset;
+      top: unset;
+      left: unset;
+      transform: unset;
+    }
+    &__direction {
+      display: flex;
+      min-width: unset;
+      height: unset;
+      position: unset;
+      top: unset;
+      right: unset;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .pt-o-test-footer {
+    position: absolute;
+    bottom: 4.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 0 -1.6rem;
+    &__pagination {
+      width: unset;
+      height: unset;
+      position: unset;
+      top: unset;
+      left: unset;
+      transform: unset;
+    }
+    &__direction {
+      display: flex;
+      min-width: unset;
+      height: unset;
+      position: unset;
+      top: unset;
+      right: unset;
+    }
+  }
+}

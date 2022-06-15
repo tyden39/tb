@@ -1,0 +1,51 @@
+.a-template-info-card {
+  &__container {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .mainbox {
+      min-width: 21.4rem;
+      margin: 0 0.8rem 1.6rem 0;
+
+      flex: 1;
+    }
+
+    .midbox {
+      width: 13%;
+      max-width: 16rem;
+      margin: 0 0.8rem 1.6rem 0;
+
+      @include desktop-sm {
+        width: 16%;
+        max-width: 20rem;
+      }
+    }
+
+    .subbox {
+      width: 10%;
+      max-width: 12rem;
+      margin: 0 0.8rem 1.6rem 0;
+
+      @include desktop-sm {
+        width: 16%;
+        max-width: 20rem;
+      }
+    }
+
+    .__checkbox {
+      margin: 0 0 1.6rem 0.8rem;
+
+      display: flex;
+      align-items: center;
+
+      span {
+        margin: 0 0 0 1rem;
+
+        color: #374352;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

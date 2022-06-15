@@ -1,0 +1,16 @@
+.o-template-picker {
+  .__picker-footer {
+    margin: 1.6rem;
+    text-align: right;
+
+    & > .__btn {
+      min-width: 15rem;
+      background: $success;
+      color: $white;
+
+      &.--disabled {
+        background: $dark_l;
+      }
+    }
+  }
+}

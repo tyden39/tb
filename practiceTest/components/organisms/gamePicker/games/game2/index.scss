@@ -1,0 +1,171 @@
+.pt-o-game-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__left {
+    width: 55%;
+    height: 100%;
+
+    & > .__container {
+      width: 100%;
+      height: 100%;
+
+      & > .pt-o-block-cloud__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > .__box {
+          width: 34%;
+          max-width: 30.8rem;
+          min-height: 11.6rem;
+          padding: 4.5rem 3.3rem;
+          background: $sunglow;
+          border-radius: 3.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          text-align: center;
+
+          &::before {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(transparent, rgba($color: $white, $alpha: 0.9));
+            border-radius: 3.2rem;
+            content: "";
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+
+          & > .__text {
+            color: $gunPowder;
+            font-family: "mont_b";
+            font-size: 2.2rem;
+            line-height: 2.7rem;
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    width: 42%;
+    height: 100%;
+
+    & > .__container {
+      height: 100%;
+      padding: 3.2rem 1.8rem 4.4rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+
+      & > .__header {
+        margin: 1.6rem 0 3.2rem 0;
+
+        & > .__description {
+          color: $gunPowder;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+        }
+      }
+
+      & > .__content {
+        margin: 4rem 0 0 0;
+        flex: 1;
+        overflow: auto;
+
+        & > div {
+          & > div {
+            &:nth-child(1) {
+              padding: 0 2.4rem 0 0;
+            }
+
+            &:nth-child(3) {
+              & > div {
+                background: $pattensBlue !important;
+              }
+            }
+          }
+        }
+
+        .__content-container {
+          min-height: 100%;
+
+          .__text {
+            padding: 0 2rem;
+            color: $gunPowder;
+            font-size: 2rem;
+            line-height: 4rem;
+
+            & > .__editable {
+              min-width: 10rem;
+              margin: 0;
+              border-bottom: 0.2rem solid $cornflower;
+              color: $dodgerBlue;
+              display: inline;
+              text-align: center;
+
+              &.--inline {
+                margin: 0 0.5rem;
+                display: inline-block;
+              }
+
+              &.--danger {
+                color: $salmon;
+              }
+
+              &.--success {
+                color: $limeGreen;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pt-o-game-2 {
+    flex-direction: row;
+    overflow: auto;
+    &__left {
+      width: 100%;
+      height: unset;
+      & > .__container {
+        & > .pt-o-block-cloud__container {
+          padding: 2rem;
+        }
+      }
+    }
+    &__right {
+      width: 100%;
+      & > .__container {
+        & > .__content {
+          margin: 0;
+          .__content-container {
+
+            .__text {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+      & > .__header {
+        & > .__container {
+          & > .__description {
+            font: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

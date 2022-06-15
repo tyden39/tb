@@ -1,0 +1,11 @@
+.l-map-goolge {
+  width: 100%;
+
+  &__iframe-style {
+    width: 731px;
+    height: 552px;
+
+    filter: drop-shadow(0px 8px 24px rgba(115, 132, 152, 0.15));
+    border-radius: 8px;
+  }
+}

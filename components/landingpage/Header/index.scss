@@ -1,0 +1,190 @@
+.landing-header {
+  width: 100%;
+  padding: 2.4rem 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  position: absolute;
+
+  line-height: 1.2;
+  color: white;
+
+  @include horizontal-tablet {
+    height: 6.4rem;
+    padding: 1.6rem 0;
+    background: linear-gradient(220.47deg, #9696d8 -5.4%, #5050b3 101.27%) no-repeat;
+    background-size:  100% 100vh;
+    overflow: hidden;
+    transition: height 0.25s ease-in;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: url('/images/landingpage/ellipse-bottom.png') no-repeat left
+        bottom;
+      background-size:auto 53%;
+
+      content: '';
+
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: url('/images/landingpage/ellipse-top.png') no-repeat right
+        -5%;
+      background-size:26%;
+
+      content: '';
+
+      pointer-events: none;
+    }
+
+    &.mobile-menu-visible {
+      height: 100vh;
+      overflow: scroll;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    top: 0.2rem;
+
+    @include horizontal-tablet {
+      top: -0.4rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include horizontal-tablet {
+      flex-direction: column;
+    }
+
+    &__header {
+      position: relative;
+      // top: -0.45rem;
+
+      @include horizontal-tablet {
+        display: flex;
+      }
+
+      &__menu-icon {
+        align-self: center;
+        display: none;
+        flex: 1;
+        text-align: right;
+        cursor: pointer;
+
+        @include horizontal-tablet {
+          display: inline;
+        }
+      }
+    }
+
+    &__left {
+      flex: 1;
+
+      @include horizontal-tablet {
+        flex: unset;
+      }
+    }
+
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1.6rem;
+
+      @include horizontal-tablet {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        gap: unset;
+
+        .trial-btn {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__mobile-mode {
+    display: none;
+    margin: 1.6rem 0 0 0;
+    @include horizontal-tablet {
+      display: block;
+    }
+
+    li {
+      margin: 4.8rem 0 0 1.6rem;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  // padding: 24px 0 22px 0;
+  background-color: #6262bc;
+  animation-name: moveDown;
+  animation-duration: 0.5s;
+}
+
+.login-btn {
+  background-color: #edf6fd;
+  color: #188FBA;
+  
+  @include horizontal-tablet {
+    background: transparent;
+    padding: 2.4rem 2rem !important;
+    display: block !important;
+    height: auto !important;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+    width: 100% !important;
+    border-radius: 0 !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  &:hover {
+    @include horizontal-tablet {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    }
+  }
+
+  a {
+    @include horizontal-tablet {
+      color: #D4D4ED;
+      display: block;
+    }
+
+    &:hover {
+      @include horizontal-tablet {
+        color: white !important;
+      }
+    }
+  }
+}
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}

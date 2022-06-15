@@ -1,0 +1,14 @@
+.m-footer-template {
+  padding: 2.4rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  text-align: right;
+  position: relative;
+  transform: translateY(2.4rem);
+
+  .submit-btn {
+    min-width: 10rem;
+    margin-left: 1.6rem;
+  }
+}

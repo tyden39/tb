@@ -1,0 +1,26 @@
+.m-unittest-multi-choice-4 {
+  width: 100%;
+
+  &__left {
+    width: 50%;
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__listquestion {
+    display: block;
+    align-items: flex-start;
+    justify-content: left;
+  }
+
+  &__line {
+    border: 0.1rem solid $gray;
+    opacity: 0.5;
+    margin: 1.4rem 1.6rem;
+  }
+}

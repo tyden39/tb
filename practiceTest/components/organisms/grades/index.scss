@@ -1,0 +1,27 @@
+.pt-o-grades {
+  width: 100%;
+  position: relative;
+
+  &__list {
+    width: calc(100% + 2rem);
+    margin: 0 0 6.4rem -1rem;
+    padding: 0 10.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+
+    & > .__item {
+      width: calc(25% - 2rem);
+      margin: 0 1rem;
+    }
+  }
+
+  &__background {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,21 @@
+.a-sl-dropdown {
+  display: contents;
+
+  &__option {
+    border: 0;
+    font-weight: bold;
+    color: $green;
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+
+    option {
+      color: $black;
+
+      &.answer {
+        color: $green;
+        font-weight: bold;
+      }
+    }
+  }
+}

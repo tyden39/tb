@@ -1,0 +1,105 @@
+.pt-m-part-direction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > .rs-btn {
+    min-width: 4.8rem;
+    height: 4.8rem;
+    margin: 0 0.8rem;
+    background: $dodgerBlue;
+    border-radius: 2.4rem;
+    color: $white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'mont_sb';
+    position: relative;
+    transition: background 0.25s ease-in-out;
+    // &::after {
+    //   width: 100%;
+    //   height: 100%;
+    //   background: linear-gradient(180deg, $deepSkyBlue, $dodgerBlue);
+    //   border-radius: 2.4rem;
+    //   content: '';
+    //   opacity: 0;
+    //   pointer-events: none;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 1;
+    //   transition: opacity 0.25s ease-in-out;
+    // }
+    // &:hover {
+    //   &::after {
+    //     opacity: 1;
+    //   }
+    // }
+    &.__next {
+      transform: rotate(180deg);
+    }
+    &.--disabled,
+    &.--disabled:hover {
+      background: $echoBlue;
+      cursor: no-drop;
+      &::before {
+        opacity: 0;
+      }
+    }
+    &.--next-part,
+    &.--prev-part {
+      min-width: 16.8rem;
+      transform: rotate(0);
+    }
+    & > span {
+      // position: relative;
+      // z-index: 2;
+      font-family: 'mont_sb' !important;
+    }
+    & > .pt-a-image {
+      width: 2.4rem;
+      z-index: 2;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .pt-m-part-direction {
+    & > .rs-btn {
+      padding: 0.6rem;
+      width: 3.8rem;
+      min-width: 3.8rem;
+      height: 3.8rem;
+      margin: 0 0.8rem;
+      border-radius: 1.9rem;
+
+      & > .pt-a-image {
+        width: 3.4rem;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pt-m-part-direction {
+    & > .rs-btn {
+      padding: 0.3rem;
+      width: 2.4rem;
+      min-width: 2rem;
+      height: 2.4rem;
+      margin: 0 0.5rem;
+      border-radius: 1.2rem;
+
+      & > .pt-a-image {
+        width: 2rem;
+        z-index: 2;
+      }
+
+      &.--next-part,
+      &.--prev-part {
+        min-width: 12rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.m-question-modal {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  .rs-modal {
+    &-content {
+      height: 100vh;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-body {
+      max-height: unset !important;
+      flex: 1;
+
+      .filter-row {
+        width: 100%;
+        height: 3.6rem;
+        display: flex;
+
+        .filter-item {
+          min-width: 20rem;
+          margin: 0 1.2rem 0 0;
+        }
+      }
+
+      .filter-table {
+        height: calc(100% - 4rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,461 @@
+.pt-o-game-3 {
+  &__container {
+    width: 100%;
+    max-width: min(105.8rem, 117vh);
+    height: 100%;
+    margin: auto;
+
+    .pt-o-block-bottom-gradient-with-header {
+      &__header {
+        & > .__heading {
+          color: $white;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
+      }
+
+      &__content {
+        & > div {
+          & > div {
+            &:nth-child(1) {
+              padding: 0 8.8rem 0 0;
+              color: $gunPowder;
+              font-family: "mont_m";
+              font-size: 2rem;
+              line-height: 4rem;
+
+              & > .__content {
+                & > .__editable {
+                  min-width: 13rem;
+                  padding: 0;
+                  border-bottom: 0.2rem solid $cornflower;
+                  color: $dodgerBlue;
+                  display: inline;
+                  text-align: center;
+
+                  &.--empty {
+                    padding: 0 6.5rem;
+                    display: inline-block;
+                  }
+
+                  &.--danger {
+                    color: $salmon;
+                  }
+
+                  &.--success {
+                    color: $limeGreen;
+                  }
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              & > div {
+                background: $pattensBlue !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-audio {
+    &__container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > .__paper {
+        width: 64.2rem;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 2rem;
+        line-height: 3.2rem;
+        position: relative;
+
+        &.--hidden {
+          display: none;
+        }
+
+        & > .__toggle {
+          width: 1.6rem;
+          height: 1.6rem;
+          cursor: pointer;
+          position: absolute;
+          top: 1.8rem;
+          right: 3.6rem;
+          z-index: 2;
+          transform: rotate(45deg);
+        }
+
+        .__pin.--right {
+          display: none;
+        }
+
+        .__content {
+          u {
+            text-decoration: underline !important;
+          }
+
+          i {
+            font-style: italic !important;
+          }
+
+          b {
+            font-weight: bold !important;
+          }
+        }
+      }
+    }
+
+    &__left {
+      width: 42vh;
+      max-width: 38rem;
+      height: 42vh;
+      max-height: 38rem;
+      border-radius: 14vh 0 0 14vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      & > .__player {
+        width: 12.8rem;
+        height: 12.8rem;
+      }
+
+      & > .__duration {
+        color: $dodgerBlue;
+        font-family: "mont_sb";
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__right {
+      width: max(calc(100% - 42vh), 72%);
+      max-width: 80rem;
+      height: 100%;
+      position: relative;
+
+      & > .__tapescript {
+        min-width: 17.6rem;
+        height: 4.6rem;
+        background: linear-gradient($deepSkyBlue, $dodgerBlue);
+        border-radius: 2.3rem;
+        color: $white;
+        font-family: "mont_b";
+        font-size: 1.8rem !important;
+        position: absolute;
+        bottom: 1.2rem;
+        left: max(-21vh, -19rem);
+        transform: translateX(-50%);
+
+        &:active {
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          width: 17.6rem;
+          height: 4.6rem;
+          background: $deepSkyBlue;
+          border-radius: 2.3rem;
+          color: $white;
+          content: "Tapescript";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "mont_b";
+          font-size: 1.8rem;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      &.--image {
+        .pt-o-block-bottom-gradient-with-header {
+          &__content {
+            height: 65%;
+            padding-top: 17.5vh;
+            position: relative;
+
+            .__image-instruction {
+              width: 100%;
+              height: 20vh;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, -25%);
+
+              .pt-a-image {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          & > .__heading {
+            color: $white;
+            font-family: "mont_m";
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+          }
+        }
+
+        &__content {
+          padding: 3.2rem 1.6rem 3.2rem 3.2rem;
+
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0 3.2rem 0 0;
+                color: $gunPowder;
+                font-family: "mont_m";
+                font-size: 1.8rem;
+                line-height: 3.6rem;
+
+                & > .__content {
+                  position: relative;
+
+                  & > .__editable {
+                    min-width: 13rem;
+                    border-bottom: 0.2rem solid $cornflower;
+                    color: $dodgerBlue;
+                    display: inline;
+                    text-align: center;
+
+                    &.--empty {
+                      display: inline-block;
+                    }
+
+                    &.--danger {
+                      color: $salmon;
+                    }
+
+                    &.--success {
+                      color: $limeGreen;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(3) {
+                & > div {
+                  background: $pattensBlue !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 1024px) and (orientation:landscape) {
+//   .pt-o-game-3  {
+//     &__container {
+//       height: calc(100vh - 2rem);
+//       .pt-o-block-bottom-gradient-with-header {
+//         &__header {
+//           & > .__heading {
+//             font-size: 1.6rem;
+//           }
+//         }
+  
+//         &__content {
+//           padding: 1.4rem;
+//           & > div {
+//             & > div {
+//               &:nth-child(1) {
+//                 padding: 0;
+//                 font-size: 1.4rem;
+//               }
+  
+//             }
+//           }
+//         }
+//       }
+//     }
+//     &-audio {
+//       &__container {
+//         flex-direction: column;
+//         padding-top: 21rem;
+//         overflow: auto;
+//       }
+//       &__left {
+//         width: 100%;
+//         min-height: 14rem;
+//         overflow: unset;
+//         height: 48%;
+//         padding-bottom: 3rem;
+//         & > .__player {
+//           width: 6.8rem;
+//           height: 6.8rem;
+//         }
+  
+//         & > .__duration {
+//           font-size: 1.8rem;
+//           bottom: 0rem;
+//           line-height: unset;
+//         }
+//       }
+//       &__right {
+//         width: 100%;
+//         min-height: 50rem;
+//         .pt-o-block-bottom-gradient-with-header {
+//           &__header {
+//             height: unset;
+//             & > .__heading {
+//               font-size: 1.4rem;
+//               line-height: 2.2rem;
+//             }
+//           }
+  
+//           &__content {
+//             padding: 1rem;
+//             height: 74%;
+//             & > div {
+//               & > div {
+//                 &:nth-child(1) {
+//                   padding: 1rem 1rem 0 1rem;
+//                   font-size: 1.4rem;
+//                   line-height: 2.4rem;
+  
+//                   & > .__content {
+//                     & > .__editable {
+//                       min-width: 9rem;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 1024px){
+  .pt-o-game-3  {
+    &__container {
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          height: unset;
+          & > .__heading {
+            font-size: 1.6rem;
+          }
+        }
+  
+        &__content {
+          padding: 1.4rem;
+          position: unset;
+          width: 100%;
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0;
+                font-size: 1.4rem;
+              }
+  
+            }
+          }
+        }
+      }
+    }
+    &-audio {
+      &__container {
+        flex-direction: column;
+        padding-top: 21rem;
+        overflow: auto;
+      }
+      &__left {
+        width: 100%;
+        min-height: 10rem;
+        overflow: unset;
+        height: 48%;
+        // padding-bottom: 3rem;
+        padding-top: 0rem;
+        & > .__player {
+          width: 6.8rem;
+          height: 6.8rem;
+        }
+  
+        & > .__duration {
+          font-size: 1.8rem;
+          bottom: 0rem;
+          line-height: unset;
+        }
+      }
+      &__right {
+        width: 100%;
+        min-height: 50rem;
+        &.--image {
+          .pt-o-block-bottom-gradient-with-header {
+            &__content {
+              .__image-instruction {
+                height: 15vh;
+                position: relative;
+                top: unset;
+                left: unset;
+                transform: unset;
+
+              }
+            }
+          }
+        }
+
+        .pt-o-block-bottom-gradient-with-header {
+          &__header {
+            height: unset;
+            & > .__heading {
+              font-size: 1.4rem;
+              line-height: 2.2rem;
+            }
+          }
+  
+          &__content {
+            padding: 1rem;
+            position: unset !important;
+            padding-top: 0 !important;
+            width: 100%;
+            & > div {
+              & > div {
+                &:nth-child(1) {
+                  padding: 1rem 1rem 0 1rem;
+                  font-size: 1.4rem;
+                  line-height: 2.4rem;
+  
+                  & > .__content {
+                    & > .__editable {
+                      min-width: 9rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,199 @@
+.pt-m-part-dropdown {
+  height: 100%;
+  padding: 0 2.4rem 0 0;
+  background: rgba($color: $aliceBlue, $alpha: 0.54);
+  border-radius: 1.6rem;
+  position: relative;
+  transition: background 0.25s ease-in-out;
+
+  &:hover {
+    background: $aliceBlue;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+
+    & > .__banner {
+      width: 8rem;
+      transform: translateY(15%);
+    }
+
+    & > .__info {
+      width: calc(100% - 11.2rem);
+      padding: 0 1.2rem;
+      color: $gunPowder;
+
+      .__test-name {
+        font-family: "mont_b";
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+
+      .__part-name {
+        margin: 0.6rem 0 0 0;
+
+        font-family: "mont_sb";
+        line-height: 2.2rem;
+
+        .__name {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    & > .__toggle {
+      width: 3.2rem;
+      height: 3.2rem;
+      transition: transform 0.25s ease-in-out;
+
+      &.--up {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & > .rs-dropdown-toggle {
+      width: 100%;
+      height: 8rem;
+      opacity: 0;
+    }
+
+    & > .rs-dropdown-menu {
+      width: 100%;
+      padding: 1.6rem 0.6rem 0.8rem 2.2rem;
+      box-shadow: 0 2rem 4rem rgba($color: $black, $alpha: 0.2);
+      top: calc(100% + 0.8rem) !important;
+
+      & > .__scroll-container {
+        width: 100%;
+        height: var(--height) !important;
+
+        & > div:nth-child(3) {
+          width: 0.6rem !important;
+
+          & > div {
+            background: $pattensBlue !important;
+          }
+        }
+
+        .rs-dropdown-item {
+          width: calc(100% - 1.6rem);
+          min-height: 4.4rem;
+          margin: 0 0 0.8rem 0;
+          padding: 1.1rem 2.4rem;
+          border-radius: 0.8rem;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          transition: background 0.25s ease-in-out;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &:hover {
+            background: $aliceBlue;
+          }
+
+          &-active {
+            background: $dodgerBlue;
+            color: $white;
+            cursor: default;
+            font-family: "mont_b";
+
+            &:hover {
+              background: $dodgerBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024) {
+  .pt-m-part-dropdown {
+    background-color: rgba(206, 230, 255, 0.64) !important;
+    padding: 1rem;
+    &__container {
+      & > .__banner {
+        width: 6rem;
+        transform: translateY(12%);
+      }
+      & > .__info {
+        padding: 0;
+        width: 100%;
+        .__test-name {
+          font-size: 1.8rem;
+          font-family: "mont_b";
+        }
+        .__part-name {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    &__menu {
+      top: -1.4rem;
+      & > .rs-dropdown-menu {
+        padding: 1rem 2rem 0 2rem;
+        & > .__scroll-container {
+          height: var(--height) !important;
+          .rs-dropdown-item {
+            font-size: 1.8rem;
+            padding: 1.2rem 2.4rem;
+            line-height: unset;
+            min-height: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pt-m-part-dropdown {
+    background-color: rgba(206, 230, 255, 0.64) !important;
+    padding: 1rem;
+    &__container {
+      & > .__banner {
+        width: 6rem;
+        transform: translateY(12%);
+      }
+      & > .__info {
+        padding: 0;
+        width: 100%;
+        .__test-name {
+          font-size: 1.4rem;
+          font-family: "mont_b";
+        }
+        .__part-name {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &__menu {
+      top: -1.4rem;
+      & > .rs-dropdown-menu {
+        padding: 1rem 2rem 0 2rem;
+        & > .__scroll-container {
+          height: var(--height) !important;
+          .rs-dropdown-item {
+            font-size: 1.4rem;
+            padding: 1.2rem 2.4rem;
+            line-height: unset;
+            min-height: unset;
+          }
+        }
+      }
+    }
+  }
+}

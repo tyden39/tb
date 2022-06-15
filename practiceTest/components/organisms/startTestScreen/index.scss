@@ -1,0 +1,328 @@
+.m-start-test-screen {
+  height: 100vh;
+  width: 100%;
+  background-image: url('/images/backgrounds/test-background.png');
+  background-size: 100% 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header {
+      display: flex;
+      background-color: #CEE6FF;
+      padding: 1rem 6rem 1rem 1.6rem;
+      margin-top: 3rem;
+      align-items: center;
+      border-radius: 1.6rem;
+      .img-book {
+        width: 3.2rem;
+        height: 4.2rem;
+      }
+      .test-name {
+        padding-left: 1.6rem;
+        .test-title {
+          font-size: 2rem;
+          font-weight: 600 !important;
+          color: #4B4A5C;
+          font-family: "mont_sb";
+          text-transform: uppercase;
+        }
+        .test-time {
+          font-size: 1.6rem;
+          font-weight: 500 !important;
+          color: #4B4A5C;
+          font-family: "mont_m";
+        }
+      }
+    }
+  }
+  .body {
+    display: flex;
+    height: calc(100vh - 9.3rem);
+    .left {
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .right {
+      width: 50%;
+      padding: 1rem 6rem 1rem 1.6rem;
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      .form-group {
+        position: relative;
+        padding: 3rem 2rem 4rem 2rem;
+        background-color: #ffffff;
+        border-radius: 1.2rem;
+        min-width: 30rem;
+        max-width: 44rem;
+        .instruction {
+          font-size: 2.4rem;
+          line-height: 2.9rem;
+          color: #4B4A5C;
+          font-family: "mont_m";
+        }
+        .form-field {
+          margin-top: 1.4rem;
+          .field-label {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: #4B4A5C;
+            font-family: "mont_m";
+          }
+          .field-error {
+            margin-top: 0.4rem;
+            color: #FF7F74;
+            font-size: 1.2rem;
+          }
+          input {
+            background-color: #F3F8FD;
+          }
+          input::placeholder {
+            color: #97BEE5;
+            opacity: 1; /* Firefox */
+          }
+          
+          input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: #97BEE5;
+          }
+          
+          input::-ms-input-placeholder { /* Microsoft Edge */
+           color: #97BEE5;
+          }
+        }
+        .form-button {
+          padding-top: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .submit-btn {
+            background: linear-gradient(#0EB1FF, #0E6CFF);
+            padding: 1.2rem 4rem;
+            border-radius: 1.6rem;
+            font-weight: 600 !important;
+          }
+        }
+        .bottom-gradient {
+          width: 100%;
+          height: 1.2rem;
+          background: linear-gradient(-90deg, $aqua, $dodgerBlue);
+          border-radius: 0 0 1.2rem 1.2rem;
+          content: '';
+          pointer-events: none;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:767px) and (orientation:portrait){
+  .m-start-test-screen {
+    height: 100vh !important;
+    &__container {
+      .header {
+        display: flex;
+        background-color:rgba(206, 230, 255, 0.4);
+        margin-top: 3rem;
+        align-items: center;
+        border-radius: 1.6rem;
+        width: 100%;
+        margin: 1rem 2rem;
+        justify-content: center;
+        padding: 1.5rem;
+        .img-book {
+          width: 2rem;
+          height: 3rem;
+        }
+        .test-name {
+          padding-left: 1.2rem;
+          .test-title {
+            font-size: 1.2rem;
+            font-weight: "mont_b";
+          }
+          .test-time {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .body {
+      height: unset;
+      flex-direction: column;
+      .left {
+        width: 100%;
+        .img-start {
+          width: 70%;
+        }
+      }
+      .right {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 5rem 3rem 5rem;
+        .form-group {
+          .instruction {
+            font-size: 1.2rem;
+          }
+          .form-field {
+            .field-label {
+              font-size: 1rem;
+            }
+          }
+          .form-button {
+            .submit-btn {
+              padding: 1rem 3rem;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:767px) and (orientation:landscape){
+  .m-start-test-screen {
+    height: 100%;
+    &__container {
+      .header {
+        display: flex;
+        background-color:rgba(206, 230, 255, 0.4);
+        margin-top: 3rem;
+        align-items: center;
+        border-radius: 1.6rem;
+        width: 100%;
+        margin: 1rem 2rem;
+        justify-content: center;
+        padding: 1.5rem;
+        .img-book {
+          width: 2rem;
+          height: 3rem;
+        }
+        .test-name {
+          padding-left: 1.2rem;
+          .test-title {
+            font-size: 1.2rem;
+            font-weight: "mont_b";
+          }
+          .test-time {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .body {
+      height: unset;
+      flex-direction: column;
+      .left {
+        width: 100%;
+        .img-start {
+          width: 70%;
+        }
+      }
+      .right {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 5rem 3rem 5rem;
+        .form-group {
+          .instruction {
+            font-size: 1.2rem;
+          }
+          .form-field {
+            .field-label {
+              font-size: 1rem;
+            }
+          }
+          .form-button {
+            .submit-btn {
+              padding: 1rem 3rem;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+  .m-start-test-screen {
+    height: 100vh !important;
+    .body {
+      height: unset;
+      flex-direction: column;
+      .left {
+        width: 100%;
+        .img-start {
+          width: 60%;
+        }
+      }
+      .right {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 2rem 3rem 2rem;
+        .form-group {
+          .instruction {
+            font-size: 2rem;
+          }
+          .form-field {
+            .field-label {
+              font-size: 1.4rem;
+            }
+          }
+          .form-button {
+            .submit-btn {
+              padding: 1.2rem 3.4rem;
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+  .m-start-test-screen {
+    height: 100%;
+    .body {
+      height: unset;
+      flex-direction: column;
+      .left {
+        width: 100%;
+        .img-start {
+          width: 60%;
+        }
+      }
+      .right {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 2rem 3rem 2rem;
+        .form-group {
+          .instruction {
+            font-size: 2rem;
+          }
+          .form-field {
+            .field-label {
+              font-size: 1.4rem;
+            }
+          }
+          .form-button {
+            .submit-btn {
+              padding: 1.2rem 3.4rem;
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

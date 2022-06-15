@@ -1,0 +1,217 @@
+.pt-o-game-6 {
+  &__container {
+    width: 100%;
+    max-width: min(105.8rem, 117vh);
+    height: 100%;
+    margin: auto;
+
+    .pt-o-block-bottom-gradient-with-header {
+      &__header {
+        .__heading {
+          color: $white;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
+      }
+
+      &__content {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        .__drop {
+          &-box {
+            width: 100%;
+            min-height: 18rem;
+            padding: 0 3.2rem 0.6rem 3.2rem;
+            background: $dodgerBlue;
+            border-radius: 2.4rem;
+            box-shadow: inset 0 0 0.64rem rgba($color: $black, $alpha: 0.4);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+
+          &-item {
+            margin: 0.6rem;
+            transition: transform 0.25s ease-in-out;
+          }
+
+          &-content {
+            padding: 0.8rem;
+            background: $white;
+            border-radius: 1.2rem;
+            box-shadow: 0 0.4rem 0 $lightSkyBlue;
+            color: $dodgerBlue;
+            cursor: grab;
+            font-family: "mont_sb";
+            font-size: 2rem;
+            line-height: 2.4rem;
+            transition: background 0.25s ease-in-out;
+
+            &:hover {
+              background: $pattensBlue;
+            }
+
+            &.--invisible {
+              opacity: 0;
+            }
+
+            &.--danger {
+              color: $salmon;
+            }
+
+            &.--success {
+              color: $limeGreen;
+            }
+          }
+        }
+
+        .__drag {
+          &-box {
+            width: 100%;
+            padding: 0 1.6rem 0.6rem 1.6rem;
+            flex: 1;
+          }
+
+          &-length {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+          }
+
+          &-item {
+            margin: 0.6rem;
+
+            &.--hidden {
+              display: none;
+            }
+          }
+
+          &-content {
+            padding: 0.8rem;
+            background: $dodgerBlue;
+            border-radius: 1.2rem;
+            box-shadow: 0 0.4rem 0 $lightSkyBlue;
+            color: $white;
+            cursor: grab;
+            font-family: "mont_sb";
+            font-size: 2rem;
+            line-height: 2.4rem;
+            position: relative;
+
+            &:hover {
+              &::before {
+                opacity: 1;
+              }
+            }
+
+            &::before {
+              width: 100%;
+              height: 100%;
+              background: linear-gradient($limeGreen, $emerald);
+              border-radius: 1.2rem;
+              box-shadow: 0 0.4rem 0 $lightGreen;
+              content: "";
+              opacity: 0;
+              pointer-events: none;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transition: opacity 0.25s ease-in-out;
+            }
+
+            &.--invisible {
+              opacity: 0;
+            }
+
+            & > span {
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__dragging-clone {
+    padding: 0.8rem;
+    border-radius: 1.2rem;
+    color: $white;
+    font-family: "mont_sb";
+    font-size: 2rem;
+    line-height: 2.4rem;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(calc(-50% - 1.6rem), calc(-50% - 1.6rem));
+
+    &.--bottom {
+      background: linear-gradient($limeGreen, $emerald);
+      box-shadow: 0 0.4rem 0 $lightGreen;
+      opacity: 1;
+    }
+
+    &.--top {
+      background: $pattensBlue;
+      box-shadow: 0 0.4rem 0 $lightSkyBlue;
+      opacity: 1;
+    }
+  }
+}
+
+@include desktop-md {
+  .pt-o-game-6 {
+    &__container {
+      .pt-o-block-bottom-gradient-with-header {
+        &__content {
+          .__drop {
+            &-box {
+              min-height: 15rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pt-o-game-6 {
+    &__container {
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          .__heading {
+            font-size: 1.4rem;
+          }
+        }
+        &__content {
+          bottom: 2.4rem;
+          .__drop {
+            &-box {
+              min-height: 8rem;
+            }
+            &-content {
+              font-size: 1.4rem;
+              padding: 0.6rem;
+            }
+          }
+          .__drag {
+            &-content {
+              font-size: 1.4rem;
+              padding: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

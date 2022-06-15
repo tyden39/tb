@@ -1,0 +1,633 @@
+.pt-o-game-11 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__left {
+    width: 55%;
+    height: 100%;
+
+    .__content {
+      color: $nightRider;
+      font-family: "mont_m";
+      font-size: 1.8rem;
+      line-height: 3.6rem;
+    }
+  }
+
+  &__right {
+    width: 42%;
+    height: 100%;
+    padding: 3.5vh 1.8rem 4.8vh 1.8rem;
+    display: flex;
+    flex-direction: column;
+
+    .__header {
+      margin: 1.7vh 0 3.5vh 0;
+
+      & > .__description {
+        color: $gunPowder;
+        font-family: "mont_m";
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        text-align: center;
+      }
+    }
+
+    & > .__content {
+      flex: 1;
+      overflow: auto;
+
+      & > div {
+        & > div {
+          &:nth-child(3) {
+            & > div {
+              background: $pattensBlue !important;
+            }
+          }
+        }
+      }
+
+      .__radio {
+        &-group {
+          margin: 0 0 2.3rem 0;
+          padding: 0 0 4.3rem 0;
+          position: relative;
+
+          &:last-child {
+            margin: 0;
+            padding: 0;
+
+            &::before {
+              display: none;
+            }
+          }
+
+          &::before {
+            width: 38rem;
+            max-width: 77%;
+            height: 0.1rem;
+            background: $cornflower;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        &-heading {
+          width: 33.2rem;
+          max-width: 67%;
+          margin: 0 auto 1.4vh auto;
+          color: $dodgerBlue;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+
+          .__space {
+            width: 8rem;
+            height: 2.2rem;
+            margin: 0 0.5rem;
+            border-bottom: 0.2rem solid $cornflower;
+            display: inline-block;
+          }
+        }
+
+        &-list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &-item {
+          width: 33.2rem;
+          max-width: 67%;
+          min-height: 5rem;
+          margin: 0 0 1.6rem 0;
+          padding: 1rem 2rem;
+          border: 0.2rem solid$cornflower;
+          border-radius: 2.5rem;
+          color: $nightRider;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1.9rem;
+          text-align: center;
+          transition: all 0.25s ease-in-out;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &:hover {
+            border-color: $lightSkyBlue;
+          }
+
+          &.--checked {
+            background: $dodgerBlue;
+            border-color: $dodgerBlue;
+            color: $white;
+            font-family: "mont_b";
+
+            &:hover {
+              cursor: default;
+            }
+          }
+
+          &.--danger {
+            background: $salmon;
+            border-color: $salmon;
+            color: $white;
+            font-family: "mont_b";
+
+            &:hover {
+              cursor: default;
+            }
+          }
+
+          &.--success {
+            background: $limeGreen;
+            border-color: $limeGreen;
+            color: $white;
+            font-family: "mont_b";
+
+            &:hover {
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .__paper {
+      width: 64.2rem;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      position: relative;
+
+      &.--hidden {
+        display: none;
+      }
+
+      & > .__toggle {
+        width: 1.6rem;
+        height: 1.6rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.8rem;
+        right: 3.6rem;
+        z-index: 2;
+        transform: rotate(45deg);
+      }
+
+      .__pin.--right {
+        display: none;
+      }
+    }
+
+    &__left {
+      width: 42vh;
+      max-width: 38rem;
+      height: 42vh;
+      max-height: 38rem;
+      border-radius: 14vh 0 0 14vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      & > .__player {
+        width: 12.8rem;
+        height: 12.8rem;
+      }
+
+      & > .__duration {
+        color: $dodgerBlue;
+        font-family: "mont_sb";
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__right {
+      max-width: calc(100% - 42vh);
+      height: 100%;
+      padding: 3.5vh 1.8rem 4.8vh 1.8rem;
+      display: flex;
+      flex-direction: column;
+
+      & > .__tapescript {
+        min-width: 17.6rem;
+        height: 4.6rem;
+        background: linear-gradient($deepSkyBlue, $dodgerBlue);
+        border-radius: 2.3rem;
+        color: $white;
+        font-family: "mont_b";
+        font-size: 1.8rem !important;
+        position: absolute;
+        bottom: 1.2rem;
+        left: max(-21vh, -19rem);
+        transform: translateX(-50%);
+
+        &:active {
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          width: 17.6rem;
+          height: 4.6rem;
+          background: $deepSkyBlue;
+          border-radius: 2.3rem;
+          color: $white;
+          content: "Tapescript";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "mont_b";
+          font-size: 1.8rem;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .__header {
+        margin: 1.7vh 0 3.5vh 0;
+
+        & > .__description {
+          color: $gunPowder;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+        }
+      }
+
+      & > .__content {
+        flex: 1;
+        overflow: auto;
+
+        & > div {
+          & > div {
+            &:nth-child(3) {
+              & > div {
+                background: $pattensBlue !important;
+              }
+            }
+          }
+        }
+
+        .__radio {
+          &-group {
+            margin: 0 0 2.3rem 0;
+            padding: 0 0 4.3rem 0;
+            position: relative;
+
+            &:last-child {
+              margin: 0;
+              padding: 0;
+
+              &::before {
+                display: none;
+              }
+            }
+
+            &::before {
+              width: 38rem;
+              max-width: 77%;
+              height: 0.1rem;
+              background: $cornflower;
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+
+          &-heading {
+            width: 33.2rem;
+            max-width: 67%;
+            margin: 0 auto 1.4vh auto;
+            color: $dodgerBlue;
+            font-family: "mont_m";
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            text-align: center;
+
+            .__space {
+              width: 8rem;
+              height: 2.2rem;
+              margin: 0 0.5rem;
+              border-bottom: 0.2rem solid $cornflower;
+              display: inline-block;
+            }
+          }
+
+          &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          &-item {
+            width: 33.2rem;
+            max-width: 67%;
+            min-height: 5rem;
+            margin: 0 0 1.6rem 0;
+            padding: 1rem 2rem;
+            border: 0.2rem solid$cornflower;
+            border-radius: 2.5rem;
+            color: $nightRider;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.9rem;
+            text-align: center;
+            transition: all 0.25s ease-in-out;
+
+            &:last-child {
+              margin: 0;
+            }
+
+            &:hover {
+              border-color: $lightSkyBlue;
+            }
+
+            &.--checked {
+              background: $dodgerBlue;
+              border-color: $dodgerBlue;
+              color: $white;
+              font-family: "mont_b";
+
+              &:hover {
+                cursor: default;
+              }
+            }
+
+            &.--danger {
+              background: $salmon;
+              border-color: $salmon;
+              color: $white;
+              font-family: "mont_b";
+
+              &:hover {
+                cursor: default;
+              }
+            }
+
+            &.--success {
+              background: $limeGreen;
+              border-color: $limeGreen;
+              color: $white;
+              font-family: "mont_b";
+
+              &:hover {
+                cursor: default;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .pt-o-game-11 {
+    flex-direction: row;
+    overflow: auto;
+    &__left {
+      width: 100%;
+      height: 35%;
+      & > .__container {
+        & > .pt-o-block-cloud__container {
+          padding: 2rem;
+        }
+      }
+      .pt-o-block-paper {
+        padding: 3rem 1.5rem 1rem 1.5rem;
+        .__pin.--right {
+          top: 1rem;
+        }
+        .__pin.--left {
+          top: 1rem;
+        }
+      }
+      .__content {
+        color: $nightRider;
+        font-family: "mont_m";
+        font-size: 2rem;
+        line-height: 3.6rem;
+      }
+    }
+    &__right {
+      width: 100%;
+      height: 100%;
+        padding: 1rem;
+        & > .__header {
+          margin: 0;
+          & > .__description {
+            font-size: 2rem;
+          }
+        }
+        & > .__content {
+          margin: 1rem;
+          .__radio {
+            &-heading {
+              font-size: 2rem;
+              margin-top: 1rem;
+            }
+            &-item {
+              font-size: 2rem;
+              padding: 0.5rem 1rem;
+              min-height: unset;
+            }
+          }
+        }
+    }
+
+    &-audio {
+      flex-direction: column;
+      &__left {
+        width: 16.6rem;
+        height: 19.8rem;
+        border-radius: unset;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        max-width: unset;
+        max-height: unset;
+        flex-direction: column;
+        overflow: unset;
+        & > .__player {
+          width: 8rem;
+          height: 8rem;
+        }
+
+        & > .__duration {
+          position: relative;
+          bottom: -1.8rem;
+          transform: unset;
+          left: unset;
+          font-size: 2.4rem;
+        }
+      }
+      &__right {
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        padding: 1rem 2rem;
+        .__header {
+          margin: 0;
+          & > .__description {
+            font-size: 2rem;
+          }
+        }
+        .__content {
+          .__radio {
+            &-heading {
+              font-size: 2rem;
+              margin-top: 1rem;
+            }
+            &-item {
+              font-size: 2rem;
+              padding: 0.5rem 1rem;
+              min-height: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pt-o-game-11 {
+    flex-direction: row;
+    overflow: auto;
+    &__left {
+      width: 100%;
+      height: 35%;
+      & > .__container {
+        & > .pt-o-block-cloud__container {
+          padding: 2rem;
+        }
+      }
+      .pt-o-block-paper {
+        padding: 3rem 1.5rem 1rem 1.5rem;
+        .__pin.--right {
+          top: 0.3rem;
+        }
+        .__pin.--left {
+          top: 0.3rem;
+        }
+      }
+      .__content {
+        color: $nightRider;
+        font-family: "mont_m";
+        font-size: 1.4rem;
+        line-height: 3.6rem;
+      }
+    }
+    &__right {
+      width: 100%;
+      height: 100%;
+        padding: 1rem;
+        & > .__header {
+          margin: 0;
+          & > .__description {
+            font-size: 1.4rem;
+          }
+        }
+        & > .__content {
+          margin: 1rem;
+          .__radio {
+            &-heading {
+              font-size: 1.6rem;
+              margin-top: 1rem;
+            }
+            &-item {
+              font-size: 1.4rem;
+              padding: 0.5rem 1rem;
+              min-height: unset;
+            }
+          }
+        }
+    }
+
+    &-audio {
+      flex-direction: column;
+      &__left {
+        width: 11.6rem;
+        height: 13.8rem;
+        border-radius: unset;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        max-width: unset;
+        max-height: unset;
+        flex-direction: column;
+        overflow: unset;
+        & > .__player {
+          width: 5rem;
+          height: 5rem;
+        }
+
+        & > .__duration {
+          position: relative;
+          bottom: -1rem;
+          transform: unset;
+          left: unset;
+          font-size: 2rem;
+        }
+      }
+      &__right {
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        padding: 1rem 2rem;
+        .__header {
+          margin: 0;
+          & > .__description {
+            font-size: 1.4rem;
+          }
+        }
+        .__content {
+          .__radio {
+            &-heading {
+              font-size: 1.6rem;
+              margin-top: 1rem;
+            }
+            &-item {
+              font-size: 1.4rem;
+              padding: 0.5rem 1rem;
+              min-height: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.m-matching-game {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .box-table {
+    display: flex;
+    align-items: flex-start;
+
+    table {
+      flex: 1;
+      table-layout: fixed;
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+
+      &:nth-child(2) {
+        thead tr th {
+          &:nth-child(1) {
+            width: 90px;
+          }
+        }
+      }
+
+      thead tr th {
+        &:last-child {
+          width: 40px;
+        }
+      }
+
+      tbody tr td {
+        input[type='number'] {
+          text-align: center;
+        }
+
+        .action {
+          position: absolute;
+          right: 1.4rem;
+          top: 50%;
+          transform: translateY(-50%);
+
+          .ic-action {
+            margin: 0 0.4rem;
+          }
+        }
+      }
+
+      .add-new-answer {
+        margin-left: 10px;
+      }
+    }
+  }
+}

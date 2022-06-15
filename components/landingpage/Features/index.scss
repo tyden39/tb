@@ -1,0 +1,327 @@
+.landing-features {
+  position: relative;
+  height: 1120px;
+  background: url('/images/landingpage/features.png') no-repeat,
+    url('/images/landingpage/features-top.png') no-repeat,
+    url('/images/landingpage/features-bottom.png') no-repeat;
+  background-position: 50% 200%, 0 -17.6rem, bottom right;
+
+  @include horizontal-tablet {
+    background-size: 100%, auto, auto;
+  }
+
+  @include horizontal-mobile {
+    background: 
+      url('/images/landingpage/features-top.png') no-repeat,
+      url('/images/landingpage/features-bottom.png') no-repeat,
+      url('/images/landingpage/tree.png') no-repeat;
+    background-position: 0 -17.6rem, bottom right, 0 100%;
+  }
+
+  .landing-wrapper {
+    position: relative;
+    height: 112rem;
+  }
+
+  &__title {
+    opacity: 0;
+
+    width: 80%;
+    position: relative;
+    padding: 5.5rem 11rem;
+    margin: 0 auto;
+
+    text-align: center;
+
+    background: rgba(242, 242, 248, 0.85);
+    box-shadow: 4px 16px 48px rgba(58, 58, 105, 0.1),
+      inset -2px -2px 2px rgba(58, 58, 105, 0.15),
+      inset 2px 2px 2px rgba(242, 242, 248, 0.25);
+    backdrop-filter: blur(64px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 32px;
+    
+    @include horizontal-mobile {
+      width: auto;
+      margin: 0 0.4rem;
+      padding: 2.5rem;
+      top: -5.4rem;
+    }
+    
+    @include horizontal-tablet {
+      width: auto;
+      margin: 0 0.4rem;
+      padding: 2.5rem;
+    }
+
+    h1 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      color: #6262bc;
+
+      @include horizontal-tablet {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
+
+      @include horizontal-mobile {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+    }
+
+    p {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 4rem;
+      line-height: 5.6rem;
+      
+      @include horizontal-mobile {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+    }
+  }
+
+  &__content {
+    &__card {
+      opacity: 0;
+      @include horizontal-mobile {
+        margin-bottom: 2.4rem;
+      }
+
+      &:not(.aos-animate) .rotate {
+        animation-play-state: paused;
+      }
+      
+      &:nth-child(1) {
+        top: 174px;
+        left: 16px;
+        .landing-feature-title {
+          @include horizontal-mobile {
+            background: rgba(53, 185, 230, 0.5);
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        right: 3.2rem;
+        top: 284px;
+
+        .landing-card__title {
+          background: rgba(98, 98, 188, 0.75);
+          @include horizontal-mobile {
+            background: none;
+          }
+        }
+
+        .landing-card__description {
+          right: 0;
+        }
+
+        .landing-feature-title {
+          @include horizontal-mobile {
+            background: rgba(98, 98, 188, 0.75);
+          }
+        }
+      }
+      
+      &:nth-child(3) {
+        left: 60px;
+        bottom: 283px;
+
+        .landing-card__title {
+          background: rgba(98, 98, 188, 0.75);
+          
+          @include horizontal-mobile {
+            background: transparent;
+          }
+        }
+
+        .landing-card__description {
+          left: -15px;
+          @include horizontal-mobile {
+            left: 0;
+          }
+        }
+
+        .landing-feature-title {
+          @include horizontal-mobile {
+            background: rgba(53, 185, 230, 0.5);
+            box-shadow: 2px 2px 8px rgba(84, 90, 104, 0.25), inset -2px -2px 4px rgba(46, 124, 170, 0.25), inset 2px 2px 4px rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(64px);
+          }
+        }
+      }
+      &:nth-child(4) {
+        right: 10.6rem;
+        bottom: 18.5rem;
+        
+        .landing-card__description {
+          right: -7rem;
+          @include desktop-sm { 
+            right: 0;
+          }
+        }
+        
+        .landing-feature-title {
+          @include horizontal-mobile {
+            background: rgba(98, 98, 188, 0.75);
+            box-shadow: 2px 2px 8px rgba(84, 90, 104, 0.25), inset -2px -2px 4px rgba(46, 124, 170, 0.25), inset 2px 2px 4px rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(64px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.move-down {
+  animation-name: featuresMoveDown;
+  @include horizontal-mobile {
+    animation-name: featuresMoveDownMobile;
+  }
+  @media screen and (max-height: 568px) {
+    animation-name: featuresMoveDownMobileTiny;
+  }
+  @media screen and (max-height: 960px) {
+    animation-name: featuresMoveDownTablet;
+  }
+
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.move-up {
+  animation: bg-up .5s ease-in forwards;
+
+  @include horizontal-mobile {
+    animation: none;
+  }
+}
+
+.move-left {
+  animation-name: zoomIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+  @include horizontal-mobile {
+    position: relative !important;
+    top: 0 !important;
+    animation-name: moveRightAgain;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+  }
+}
+
+.move-right {
+  animation-name: zoomIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+  @include horizontal-mobile {
+    position: relative !important;
+    top: 0 !important;
+    animation-name: moveRightAgain;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes featuresMoveDown {
+  from {
+    top: -20rem;
+    opacity: 0;
+  }
+  to {
+    top: -9.6rem;
+    opacity: 1;
+  }
+}
+
+@keyframes featuresMoveDownMobile {
+  from {
+    top: -20rem;
+    opacity: 0;
+  }
+  to {
+    top: -5.4rem;
+    opacity: 1;
+  }
+}
+
+@keyframes featuresMoveDownMobileTiny {
+  from {
+    top: -20rem;
+    opacity: 0;
+  }
+  to {
+    top: -3.6rem;
+    opacity: 1;
+  }
+}
+
+@keyframes featuresMoveDownTablet {
+  from {
+    top: -20rem;
+    opacity: 0;
+  }
+  to {
+    top: -6rem;
+    opacity: 1;
+  }
+}
+
+@keyframes bg-up {
+  from {
+    background-position: 50% 200%, 0 -17.6rem, bottom right;
+  }
+  to {
+    background-position: center, 0 -17.6rem, bottom right;
+  }
+}
+
+@keyframes moveRightFeatureIcon {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+  to {
+    left: 1.6rem;
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeftFeatureIcon {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 1.6rem;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,145 @@
+.pt-o-game-4 {
+  &__container {
+    width: 100%;
+    max-width: 83rem;
+    height: calc(100% - 6.6rem);
+    margin: 6.6rem auto 0 auto;
+    & > .__content {
+      display: flex;
+      flex-direction: column;
+      & > .__description {
+        width: calc(100% - 8.6rem);
+        margin: 0 0 4.8rem 0;
+        padding: 3.9rem 14.5rem;
+        background: $aliceBlue;
+        border-radius: 2.4rem;
+        transform: translate(4.3rem, -6.6rem);
+        & > .__text {
+          color: $gunPowder;
+          font-family: 'mont_m';
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+        }
+      }
+      & > .__list {
+        width: calc(100% - 8.6rem);
+        margin: 0 auto;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        transform: translateY(-6.6rem);
+        & > .__item {
+          margin: 0 0.8rem;
+          padding: 4.5rem 2.5rem;
+          border: 0.2rem solid $pattensBlue;
+          border-radius: 3.2rem;
+          color: $gunPowder;
+          cursor: pointer;
+          font-family: 'mont_sb' !important;
+          font-size: 2.2rem;
+          line-height: 2.7rem;
+          transition: all 0.25s ease-in-out;
+          &:hover {
+            border-color: $lightSkyBlue;
+          }
+          &.--primary {
+            background: $dodgerBlue;
+            border-color: $dodgerBlue;
+            color: $white;
+            cursor: default;
+            u {
+              color: $limeGreen;
+            }
+          }
+          &.--success {
+            background: $limeGreen;
+            border-color: $limeGreen;
+            color: $white;
+            cursor: default;
+            u {
+              color: $white;
+            }
+          }
+          &.--danger {
+            background: $salmon;
+            border-color: $salmon;
+            color: $white;
+            cursor: default;
+            u {
+              color: $white;
+            }
+          }
+          u {
+            color: $dodgerBlue;
+            display: inline-block !important;
+            text-decoration: underline !important;
+            transition: color 0.25s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 896px) and (max-width: 1024px) {
+  .pt-o-game-4 {
+    &__container {
+      & > .__content {
+        & > .__description {
+          transform: translate(4.3rem, -4.6rem);
+          padding: 2rem;
+          margin: 0;
+          & > .__text {
+            font-size: 2rem;
+          }
+        }
+        & > .__list {
+          // width: 100%;
+          display: grid;
+          overflow: unset;
+          flex: unset;
+          margin-top: 3rem;
+          & > .__item {
+            padding: 2.5rem 8rem;
+            margin: 1rem 3rem;
+            font-size: 2rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  .pt-o-game-4 {
+    &__container {
+      & > .__content {
+        & > .__description {
+          transform: translate(4.3rem, -4.6rem);
+          padding: 2rem;
+          margin: 0;
+          & > .__text {
+            font-size: 2rem;
+          }
+        }
+        & > .__list {
+          // width: 100%;
+          display: grid;
+          overflow: unset;
+          flex: unset;
+          margin-top: 3rem;
+          & > .__item {
+            padding: 1rem 3rem;
+            margin: 0.6rem 3rem;
+            font-size: 2rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

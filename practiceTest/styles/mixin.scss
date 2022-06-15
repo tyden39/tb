@@ -1,0 +1,70 @@
+// colors
+// === black
+$black: #000;
+$gunPowder: #4b4a5c;
+$nightRider: #343434;
+
+// === white
+$aliceBlue: #f3f8fd;
+$aliceBlue_sb: #e9f4ff;
+$echoBlue: #aab1c5;
+$gainsboro: #e2e2e2;
+$solitude: #e2efff;
+$pattensBlue: #d4e9ff;
+$white: #fff;
+// === red
+$salmon: #ff7f74;
+$scarlet: #f82a19;
+// === orange
+$chardonnay: #ffc578;
+$darkOrange: #ff8810;
+$orange: #ffa805;
+// === yellow
+$kournikova: #ffd64e;
+$sunglow: #ffc833;
+$witchHaze: #fffa78;
+// === green
+$atlantis: #77e335;
+$emerald: #53e077;
+$kellyGreen: #5cc41c;
+$lightGreen: #6effa0;
+$limeGreen: #2dd238;
+$malachite: #00d34e;
+$mediumAquamarine: #4af0aa;
+$screamingGreen: #75f45e;
+// === blue
+$airForceBlue: #5c84ac;
+$aqua: #00edff;
+$columbiaBlue: #aae3ff;
+$cornflower: #97bee5;
+$danube: #578dc4;
+$darkTurquoise: #00c8d5;
+$deepSkyBlue: #0eb1ff;
+$dodgerBlue: #2692ff;
+$dodgerBlue_sb: #0e6cff;
+$lightSkyBlue: #8cc4fe;
+$mayaBlue: #57c9ff;
+$royalBlue: #286bdc;
+$tangaroa: #0e233b;
+$tropicalBlue: #afc6e5;
+// === pink
+$heliotrope: #dd85f8;
+// === purple
+$mediumPurple: #875fd8;
+
+// breakpoints
+$desktop-md: 1599px;
+$desktop-sm: 1399px;
+
+// media queries
+@mixin desktop-md {
+  @media (max-width: $desktop-md) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: $desktop-sm) {
+    @content;
+  }
+}

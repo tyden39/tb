@@ -1,0 +1,599 @@
+[
+  {
+    "name": "ENGLISH 1-5 UNIT TEST",
+    "slug": "english-1-5-unit-test",
+    "totalQuestions": 25,
+    "sections": [
+      {
+        "name": "Listening",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Listen and draw lines",
+              "Listen and number the pictures"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Listen and tick the box"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Listen and color/draw",
+              "Listen and write"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Reading",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Read and draw lines"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1.25,
+            "note": ""
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Look, read and circle"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1.25,
+            "note": ""
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Look, read and put a tick (√) or a cross (x)",
+              "Read and match"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 1.25,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Writing",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Order the letters"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Look and write"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Reorder the words to make a correct sentence"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Speaking",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Phononics"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 1,
+            "note": "5 items for Grades 3-5"
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Talk about familiar objects"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": "5 items for Grades 3-5"
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Respond to familiar structures"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": "5 items for Grades 3-5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ENGLISH 1-5 FINAL TEST",
+    "slug": "english-1-5-final-test",
+    "totalQuestions": 30,
+    "sections": [
+      {
+        "name": "Listening",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Listen and draw lines",
+              "Listen and number the pictures"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 0.5,
+            "note": ""
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Listen and tick the box"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Listen and color",
+              "Listen and write"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Reading",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Read and draw lines"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Look, read and circle"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Look, read and put a tick (√) or a cross (x)",
+              "Read and match"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Writing",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Order the letters"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Reorder the words to make a correct sentence. "
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 2,
+            "note": ""
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Look and write"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 1,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Speaking",
+        "parts": [
+          {
+            "name": "Part 1",
+            "taskTypes": [
+              "Phononics"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 1,
+            "note": "For grades 1&2 only"
+          },
+          {
+            "name": "Part 2",
+            "taskTypes": [
+              "Talk about familiar objects"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": "5 items for Grades 3-5"
+          },
+          {
+            "name": "Part 3",
+            "taskTypes": [
+              "Respond to familiar structures"
+            ],
+            "numOfQuestions": 4,
+            "pointsPerCorrectAnswer": 1,
+            "note": "5 items for Grades 3-5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ENGLISH 6-9 UNIT TEST",
+    "slug": "english-6-9-unit-test",
+    "totalQuestions": 50,
+    "sections": [
+      {
+        "name": "Pronunciation",
+        "parts": [
+          {
+            "name": "Sounds",
+            "taskTypes": [
+              "Choose the word whose underlined part is pronounced differently"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": ""
+          },
+          {
+            "name": "Stress",
+            "taskTypes": [],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Use of language",
+        "parts": [
+          {
+            "name": "Vocab & Grammar",
+            "taskTypes": [
+              "Choose the best option (A, B, C or D)"
+            ],
+            "numOfQuestions": 10,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": ""
+          },
+          {
+            "name": "Signs/Notices",
+            "taskTypes": [
+              "Choose the best option (A, B, C or D)"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": ""
+          },
+          {
+            "name": "Word forms/Verb tenses",
+            "taskTypes": [
+              "Write the correct form of the word in brackets",
+              "Write the correct tense of the verb in brackets"
+            ],
+            "numOfQuestions": 6,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Listening",
+        "parts": [
+          {
+            "name": "Listening 1",
+            "taskTypes": [
+              "True - False",
+              "Matching",
+              "Form-filling"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Question types vary based on the contents of the units"
+          },
+          {
+            "name": "Listening 2",
+            "taskTypes": [
+              "Multiple-choice (4 options)",
+              "Error identifying (Listen and underline the wrong information in the statements/dialog)"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Question types vary based on the contents of the units"
+          }
+        ]
+      },
+      {
+        "name": "Reading",
+        "parts": [
+          {
+            "name": "Reading comprehension",
+            "taskTypes": [
+              "True - False",
+              "Multiple choice",
+              "Matching"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Question types vary based on the contents of the units"
+          },
+          {
+            "name": "Guided cloze",
+            "taskTypes": [
+              "Cloze: filling the blanks with words from the box",
+              "Cloze: choosing the best option (A, B, C, D) for each blank",
+              "Cloze: using words from the given information to complete a summary or a dialog"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Question types vary based on the contents of the units"
+          }
+        ]
+      },
+      {
+        "name": "Writing",
+        "parts": [
+          {
+            "name": "Jumbled sentences",
+            "taskTypes": [
+              "Put the words in the correct order to make meaningful sentences"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Number of questions may change among the 3 sub-sections. Might include only 2 of the sub-sections"
+          },
+          {
+            "name": "Sentence transformation/Error correction",
+            "taskTypes": [
+              "Complete the second sentence so that it means the same as the first one",
+              "Each sentence has ONE mistake. Underline the mistake and write your correction on the line"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Number of questions may change among the 3 sub-sections. Might include only 2 of the sub-sections"
+          },
+          {
+            "name": "Sentence building/Question making",
+            "taskTypes": [
+              "Write meaningful sentences using the given words or phrases",
+              "Make a suitable question for each underlined part"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Number of questions may change among the 3 sub-sections. Might include only 2 of the sub-sections"
+          }
+        ]
+      },
+      {
+        "name": "Speaking",
+        "parts": [
+          {
+            "name": "Speaking",
+            "taskTypes": [
+              "Matching responses to questions",
+              "Complete a dialog using the given questions/responses",
+              "Ordering the given sentences to make a meaningful dialog"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.2,
+            "note": "Optional"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ENGLISH 6-9 MIDTERM & FINAL TEST",
+    "slug": "english-6-9-midterm-final-test",
+    "totalQuestions": 40,
+    "sections": [
+      {
+        "name": "Listening",
+        "parts": [
+          {
+            "name": "Listening",
+            "taskTypes": [
+              "True - False",
+              "Matching",
+              "Form-filling"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Pronunciation",
+        "parts": [
+          {
+            "name": "Sounds/Stress",
+            "taskTypes": [
+              "Choose the word whose underlined part is pronounced differently",
+              "Choose the word that has a different stressed syllable from the rest"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Use of language",
+        "parts": [
+          {
+            "name": "Vocab & Grammar",
+            "taskTypes": [
+              "Choose the best option (A, B, C or D)"
+            ],
+            "numOfQuestions": 8,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          },
+          {
+            "name": "Signs/Notices",
+            "taskTypes": [
+              "Choose the best option (A, B, C or D)"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          },
+          {
+            "name": "Dialog",
+            "taskTypes": [
+              "Choose the best option (A, B, C or D)"
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          },
+          {
+            "name": "Word forms/Verb tenses",
+            "taskTypes": [
+              "Write the correct form of the word in brackets",
+              "Write the correct tense of the verb in brackets"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "name": "Reading",
+        "parts": [
+          {
+            "name": "Reading comprehension",
+            "taskTypes": [
+              "True - False",
+              "Multiple choice",
+              "Matching"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": ""
+          },
+          {
+            "name": "Guided cloze",
+            "taskTypes": [
+              "Cloze: filling the blanks with words from the box",
+              "Cloze: choosing the best option (A, B, C, D) for each blank",
+              "Cloze: using words from the given information to complete a summary or a dialog"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": "Question types vary based on the contents of the units"
+          }
+        ]
+      },
+      {
+        "name": "Writing",
+        "parts": [
+          {
+            "name": "Jumbled sentences",
+            "taskTypes": [
+              "Arrange the words to make correct sentences."
+            ],
+            "numOfQuestions": 2,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": "Number of questions may change among the 3 sub-sections"
+          },
+          {
+            "name": "Question making/Error correction",
+            "taskTypes": [
+              "Make a suitable question for each underlined part",
+              "Each sentence has ONE mistake. Underline the mistake and write your correction on the line"
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": "Number of questions may change among the 3 sub-sections"
+          },
+          {
+            "name": "Sentence transformation/Sentence building",
+            "taskTypes": [
+              "Complete the second sentence so that it means the same as the first one.",
+              "Write meaningful sentences using the given words or phrases."
+            ],
+            "numOfQuestions": 3,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": "Number of questions may change among the 3 sub-sections"
+          }
+        ]
+      },
+      {
+        "name": "Speaking",
+        "parts": [
+          {
+            "name": "Speaking",
+            "taskTypes": [
+              "Matching responses to questions",
+              "Complete a dialog using the given questions/responses",
+              "Ordering the given sentences to make a meaningful dialog"
+            ],
+            "numOfQuestions": 5,
+            "pointsPerCorrectAnswer": 0.25,
+            "note": "Optional"
+          }
+        ]
+      }
+    ]
+  }
+]

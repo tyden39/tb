@@ -1,0 +1,157 @@
+.m-drag-and-drop {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .box-words {
+    position: relative;
+    min-height: 11rem;
+    border: 1px solid #d5dee8;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4px 12px 4.5rem 12px;
+    margin-bottom: 1.6rem;
+    background-color: white;
+
+    &:focus {
+      border-color: #6868ac;
+    }
+
+    > input {
+      width: 100px;
+      height: 30px;
+      border: 1px solid #d5dee8;
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    > div {
+      background: #f5f8fc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 5px 8px 5px 12px;
+      margin: 4px;
+      min-width: 40px;
+      position: relative;
+
+      span {
+        white-space: nowrap;
+        min-width: 20px;
+      }
+
+      > img {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0.8rem;
+        cursor: pointer;
+      }
+    }
+
+    &[data-exist='true'] {
+      label {
+        top: 0;
+        left: 1.2rem;
+
+        color: #6868ac;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 2rem;
+      left: 0.1rem;
+
+      padding: 0 1.2rem;
+
+      font-size: 1.4rem;
+      font-weight: 500;
+
+      transform: translateY(-50%);
+
+      transition: all 0.25s;
+
+      pointer-events: none;
+
+      &::before {
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: calc(50% + 0.025rem);
+
+        background: #fff;
+
+        content: '';
+      }
+
+      span {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+  table {
+    thead tr th {
+      &:nth-child(2) {
+        width: 60px;
+      }
+    }
+
+    tbody tr.divide div {
+      margin: 0 16px !important;
+    }
+
+    .add-new-answer {
+      margin-left: 1rem;
+    }
+
+    .rs-picker-tag-wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .rs-picker-toggle-clean,
+    .rs-picker-toggle-caret {
+      display: none;
+    }
+
+    .rs-picker-input {
+      border: 0;
+      width: 100%;
+    }
+
+    .rs-tag {
+      background-color: #f5f8fc;
+      font-size: 1.4rem;
+      padding-right: 30px;
+    }
+
+    .rs-tag-icon-close {
+      svg {
+        visibility: hidden;
+      }
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        width: 1.6rem;
+        height: 1.6rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(/images/icons/ic-close-circle.png);
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@keyframes click-wave {
+  0% {
+    height: 0.2rem;
+    width: 0.2rem;
+
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 3rem;
+    width: 3rem;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    opacity: 0;
+  }
+}
+
+.a-multichoiceanswers {
+  width: 100%;
+
+  &__answer {
+    line-height: 2.2rem;
+  }
+
+  &__intruction {
+    margin: 0 0 0.4rem 0;
+  }
+
+  .option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+
+    appearance: none;
+    position: relative;
+    top: 0.3rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1.4rem;
+    width: 1.4rem;
+
+    transition: all 0.15s ease-out 0s;
+
+    border: 1px solid $green;
+    border-radius: 50%;
+
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+
+    margin-right: 2.4rem;
+
+    outline: none;
+    position: relative;
+    z-index: 10;
+  }
+  .option-input:hover {
+    background: #9faab7;
+  }
+  .option-input:checked {
+    background: $green;
+  }
+  .option-input:checked::before {
+    height: 1.4rem;
+    width: 1.4rem;
+
+    position: absolute;
+    content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg);
+    transform: scale(0.5);
+    display: inline-block;
+
+    font-size: 1rem;
+    line-height: 0;
+    right: -5%;
+  }
+  .option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+
+    animation: click-wave 0.65s;
+    background: $green;
+    content: "";
+
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .option-input.radio {
+    border-radius: 50%;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }
+
+  .option-input:checked ~ label {
+    color: $green;
+    font-weight: bold;
+  }
+}

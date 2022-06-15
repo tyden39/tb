@@ -1,0 +1,9 @@
+.a-multichoiceimage {
+  &__thumbnail img {
+    width: 338px;
+    height: 153px;
+
+    margin: 0 0 1.6rem 0;
+    object-fit: contain;
+  }
+}

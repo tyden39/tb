@@ -1,0 +1,65 @@
+.m-template-parts {
+    .__add-task-type {
+        height: 3.2rem;
+        margin: 0 0 0 20rem;
+        padding: 0 1rem;
+        background: $success;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        svg {
+            margin: 0 0 0 1rem;
+        }
+    }
+    .__tag {
+        input:disabled {
+            background: rgba($color: $success, $alpha: 0.25);
+            pointer-events: none;
+        }
+    }
+    .__task-select {
+        padding: 0 0 0 20rem;
+        position: relative;
+        &[data-label] {
+            &::before {
+                width: 20rem;
+                height: 3.6rem;
+                content: attr(data-label);
+                position: absolute;
+                top: 1rem;
+                left: 0;
+            }
+        }
+        .rs-dropdown {
+            width: 100%;
+            &-toggle {
+                width: 100%;
+                height: 3.6rem;
+                padding: 0 1rem;
+                background: transparent;
+                border: 0.1rem solid $light;
+                display: flex;
+                align-items: center;
+                font-size: 1.6rem;
+                svg {
+                    top: 50%;
+                    right: 1rem;
+                    transform: translateY(-50%);
+                }
+            }
+            &-menu {
+                width: 100%;
+                border-radius: 0;
+                .rs-dropdown-item {
+                    background: $white !important;
+                    color: $dark !important;
+                    &:hover {
+                        background: rgba($color: $success, $alpha: 0.25) !important;
+                    }
+                }
+            }
+        }
+    }
+}

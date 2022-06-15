@@ -1,0 +1,37 @@
+.a-filter-select {
+    .rs-dropdown {
+        width: 100%;
+        &-toggle {
+            width: 100%;
+            background: rgba($color: $success, $alpha: 0.1);
+            text-align: left;
+            .reset-btn {
+                position: absolute;
+                top: 50%;
+                right: 2.4rem;
+                transform: translateY(-50%);
+            }
+            .caret-toggle {
+                pointer-events: none;
+                position: absolute;
+                top: 50%;
+                right: 0.8rem;
+                transform: rotate(90deg) translateX(-50%);
+            }
+            .rs-ripple-pond {
+                display: none;
+            }
+        }
+        &-menu {
+            width: 100%;
+            border-radius: 0;
+        }
+        &-item {
+            transition: all 0.25s;
+            &:hover {
+                background: rgba($color: $success, $alpha: 0.5);
+                color: $dark;
+            }
+        }
+    }
+}

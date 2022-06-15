@@ -1,0 +1,19 @@
+.m-sidenav {
+  position: relative;
+
+  &__list {
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      & ~ .m-sidenav__runner {
+        opacity: 1;
+      }
+    }
+
+    .list-item {
+      min-height: 4.8rem;
+      margin: 0 0 2.4rem 0;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.o-footer {
+    height: 100%;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    &>.__copyright {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+    &>.__nav {
+        height: 100%;
+        flex: 1;
+    }
+}

@@ -1,0 +1,15 @@
+.o-footnav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  & > .__item {
+    margin: 0 0 0 1.6rem;
+    color: $dark;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}

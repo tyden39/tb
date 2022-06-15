@@ -1,0 +1,144 @@
+.o-header {
+  height: 100%;
+  padding: 0 3.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+
+  transition: all 0.25s;
+
+  &__title {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    h1 {
+      color: #374352;
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.04rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  &__action {
+    height: 100%;
+    padding: 0 0 0 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+
+    .action-btn {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin: 0 0 0 2.4rem;
+    }
+
+    .action-account {
+      position: relative;
+
+      width: 15.2rem;
+      height: 4rem;
+      margin: 0 0 0 2.4rem;
+
+      &[data-size='lg'] {
+        width: 20.2rem;
+
+        .action-account-cover {
+          .info {
+            .upper {
+              span {
+                width: calc(20.2rem - 6.9rem);
+              }
+            }
+          }
+        }
+      }
+
+      &-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 4rem;
+          height: 4rem;
+          margin: 0 0.9rem 0 0;
+
+          object-fit: cover;
+          object-position: center;
+          overflow: hidden;
+
+          border-radius: 50%;
+        }
+
+        .info {
+          flex: 1;
+
+          .upper {
+            position: relative;
+
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            span {
+              width: calc(15.2rem - 6.9rem);
+
+              display: block;
+              overflow: hidden;
+
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .upper-toggle {
+              position: absolute;
+              top: 50%;
+              right: 0;
+
+              width: 2rem;
+              height: 2rem;
+
+              transform: translateY(-50%);
+            }
+          }
+
+          .below {
+            color: #738498;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+          }
+        }
+      }
+
+      &-dropdown {
+        top: 0.4rem;
+
+        width: 100%;
+
+        .rs-dropdown {
+          &-toggle {
+            width: 100%;
+            height: 4rem;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

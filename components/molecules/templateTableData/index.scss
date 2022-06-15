@@ -1,0 +1,80 @@
+.m-template-table-data {
+    &__content {
+        padding: 0 2.4rem 2.4rem 2.4rem;
+    }
+    &__container {
+        padding: 2.4rem;
+        table {
+            width: 100%;
+            thead {
+                tr:hover {
+                    background: transparent;
+                }
+            }
+            tr {
+                border-bottom: 0.1rem solid #f0f2f5;
+                transition: background 0.25s;
+                &:hover {
+                    background-color: rgba($color: rgb(130, 189, 245), $alpha: 0.15);
+                }
+                th {
+                    height: 4.6rem;
+                    color: #7b809a;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-align: left;
+                }
+                td {
+                    height: 6rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    .action-btn {
+                        padding-left: 0;
+                        color: #7b809a;
+                        box-shadow: none;
+                        font-weight: 700;
+                        &[data-role='detail'] {
+                            &:hover {
+                                color: #1ab394;
+                            }
+                        }
+                        &[data-role='remove'] {
+                            &:hover {
+                                color: #d12f1d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__pagination {
+        padding: 0 2.4rem 4.8rem 2.4rem;
+        display: flex;
+        justify-content: flex-end;
+        .rs-pagination-btn {
+            width: 3.6rem;
+            height: 3.6rem;
+            margin: 0;
+            border: 0.1rem solid #dee2e6;
+            border-radius: 50%;
+            box-shadow: none;
+            color: #7b809a;
+            font-size: 1.6rem;
+            font-weight: 700;
+            &[aria-label='More'] {
+                border: none;
+            }
+            &:focus {
+                background: #1ab394;
+                color: #fff;
+            }
+            &-active {
+                background: #1ab394;
+                border-color: #1ab394 !important;
+                color: #fff;
+                pointer-events: none;
+            }
+        }
+    }
+}

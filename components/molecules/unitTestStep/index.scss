@@ -1,0 +1,20 @@
+.m-unit-test {
+  padding: 0 3.2rem;
+
+  .rs-steps-item-status-process .rs-steps-item-icon-wrapper {
+    background: $success;
+    border-color: $success;
+  }
+
+  .rs-steps-item-status-finish .rs-steps-item-icon-wrapper {
+    border-color: $success;
+
+    svg {
+      color: $success;
+    }
+  }
+
+  .rs-steps-item-status-finish .rs-steps-item-title:after {
+    border-color: $success;
+  }
+}

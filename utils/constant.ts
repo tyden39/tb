@@ -1,0 +1,1 @@
+export const OPT_TIME_MINUTES = 5;

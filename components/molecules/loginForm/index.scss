@@ -1,0 +1,310 @@
+.m-login-form {
+  // max-width: 36rem;
+  // min-width: 32rem;
+  width: 36rem;
+  &__title {
+    margin: 0 0 0.8rem 0;
+    color: #374352;
+    font-size: 3.6rem;
+    font-weight: 600 !important;
+    line-height: 4.4rem;
+    text-align: center;
+  }
+
+  &__description {
+    margin: 1rem 0 2.4rem 0;
+    color: #374352;
+    font-size: 1.6rem;
+    font-weight: 400 !important;
+    text-align: center;
+    font-family: 'Inter';
+    .register {
+      color: #505091;
+      font-size: 1.6rem;
+      font-weight: 600 !important;
+      cursor: pointer;
+    }
+  }
+
+  &__social-regis {
+    text-align: center;
+    color: #738498;
+    font-size: 1.6rem;
+    font-weight: 500 !important;
+    margin-top: 3rem;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    .facebook-btn {
+      background-color: #4A598F;
+      color: #FFFFFF;
+      width: 48%;
+      border-radius: 1rem;
+      padding: 0.8rem 0;
+      font-size: 1.6rem;
+      font-weight: 600 !important;
+      max-width: 16rem;
+      margin-right: 1rem;
+    }
+    .google-btn {
+      background-color: #D95040;
+      color: #FFFFFF;
+      width: 48%;
+      border-radius: 1rem;
+      padding: 0.8rem 0;
+      font-size: 1.6rem;
+      font-weight: 600 !important;
+      max-width: 16rem;
+    }
+    .auth-icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__container {
+    padding: 3.2rem 0 0 0;
+
+    .form-row {
+      margin: 2.4rem 0 1.6rem 0;
+      width: 100%;
+      .input-title {
+        color: #526375;
+        font-size: 1.2rem;
+        font-weight: 600 !important;
+        margin-bottom: 0.5rem;
+      }
+      .contai-pass {
+        display: flex;
+        position: relative;
+        .eye-icon {
+          position: absolute;
+          right: 0.8rem;
+          top: 0.8rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          cursor: pointer;
+        }
+  
+        .input-pass {
+          padding-right: 3.6rem;
+        }
+        .a-input-with-label {
+          width: 100%;
+        }
+      }
+      .error-input {
+        border: 1px solid #AD4D34;
+      }
+    }
+
+    .spec-input {
+      margin-top: 2.8rem;
+    }
+
+    .forget-row {
+      margin: 0;
+    }
+  
+    .error-contain {
+      margin-top: 0.5rem;
+      align-items: center;
+      display: flex;
+      .warning-img {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+
+    .error-email-forgot {
+      margin-top: -1rem;
+    }
+
+    .form-error-message {
+      color: #AD4D34;
+      margin-top: 0;
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .toggle-group {
+      display: flex;
+      align-items: center;
+
+      label {
+        margin: 0 0 0 1.6rem;
+        color: #7b809a;
+      }
+    }
+
+    .submit-group {
+      margin: 2.4rem 0;
+      text-align: center;
+      .submit-btn {
+        background: #6868AC;
+        color: #fff;
+        font-weight: 500;
+        padding: 1.2rem 6rem;
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        font-weight: 600 !important;
+      }
+
+      .forget-pass {
+        color: #505091;
+        font-size: 1.6rem;
+        font-weight: 600 !important;
+        cursor: pointer;
+        margin-top: 1.6rem;
+      }
+    }
+    .return-btn {
+      margin: 0;
+    }
+
+    .policy-contain {
+      display: flex;
+      margin-left: -1rem;
+      align-items: flex-start;
+      .policy {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        .policy-bold {
+          color: #505091;
+          font-size: 1.4rem;
+          font-weight: 600 !important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__forgot {
+    padding: 0;
+  }
+
+  &__forgot-email-des {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #374352;
+    line-height: 2.4rem;
+  }
+
+  &__forgot-email {
+    text-align: center;
+    font-weight: 600 !important;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    color: #374352;
+    line-height: 2.4rem;
+  }
+  &__opt-des {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: #374352;
+    line-height: 2.4rem;
+    .otp-time {
+      color:#C96851;
+      font-weight: 600 !important;
+    }
+  }
+  &__resend-otp {
+    color: #9CABBD;
+    font-weight: 600 !important;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  &__resend-otp-active {
+    color: #4A598F;
+    font-weight: 600 !important;
+    cursor: pointer;
+  }
+  &__avatar {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    .avatar-img {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1rem;
+    }
+    .avatar-email {
+      color: #374352;
+      font-weight: 500 !important;
+      font-size: 1.6rem;
+    }
+  }
+  &__success {
+    text-align: center;
+    padding-bottom: 3rem;
+    .success-img  {
+      width: 8rem;
+      height: 8rem;
+      align-self: center;
+    }
+  }
+  &__check-pass {
+    display: flex;
+    align-items: center;
+    .check-img {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 0.5rem;
+    }
+    .hint-pass {
+      color: #374352;
+    }
+    .hint-pass-correct {
+      color: #568745;
+    }
+  }
+  .error-contain-otp {
+    margin-top: 1rem;
+    align-items: center;
+    display: flex;
+    .warning-img {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.5rem;
+    }
+    .otp-error-message {
+      font-size: 1.2rem;
+      color:#C96851;
+    }
+  }
+  .rs-checkbox-wrapper {
+    .rs-checkbox-inner:before {
+      background-color: #6868AC;
+      border-color: #6868AC;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+
+.rs-tooltip[class*=placement-left]:after {
+  border-left-color: #ffffff;
+}
+
+.rs-tooltip[class*=placement-top]:after {
+  border-top-color: #ffffff;
+}
+
+.rs-tooltip[class*=placement-left] {
+  padding: 1rem !important;
+}
+
+.rs-tooltip[class*=placement-top] {
+  margin-top: -0.5rem !important;
+  padding: 1rem !important;
+}
+
+
+
+

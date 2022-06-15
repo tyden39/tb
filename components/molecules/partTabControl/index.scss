@@ -1,0 +1,18 @@
+.m-part-tab-control {
+  &.--hidden {
+    display: none;
+  }
+
+  .add-tab-btn {
+    background: #fff !important;
+    border: 0.1rem solid #1ab394;
+    border-radius: 0 1.2rem 0 0 !important;
+    color: #1ab394 !important;
+    position: relative;
+    transition: color 0.25s;
+
+    svg {
+      margin-left: 1.2rem;
+    }
+  }
+}

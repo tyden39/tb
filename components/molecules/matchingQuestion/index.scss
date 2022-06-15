@@ -1,0 +1,74 @@
+.matching-question {
+  min-height: 16rem;
+
+  background-color: #ffffff;
+  &__des {
+    color: #374352;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  &__table {
+    table,
+    th,
+    td {
+      border: 1rem solid white;
+    }
+    width: 100%;
+    .left-data {
+      width: 35%;
+    }
+    .left-column {
+      width: 24%;
+    }
+    .right-column {
+      width: 35%;
+    }
+    .pos-correct {
+      width: 6%;
+      color: #71ac5d;
+    }
+    .left-data-col {
+      padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+      position: relative;
+      .left-value {
+        position: absolute;
+        background-color: #e6f6fc;
+        top: 0;
+        font-weight: 400;
+        padding: 1rem 1.4rem;
+        letter-spacing: -0.02rem;
+        text-align: left;
+      }
+    }
+    .left-data-audio {
+      position: relative;
+      .audio {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: #e6f6fc;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .play-img {
+          width: 1.2rem;
+          height: 1.4rem;
+          margin-right: 0.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .col-data {
+      .content {
+        border: 1px solid #d5dee8;
+        padding: 1rem;
+      }
+    }
+    .center {
+      text-align: center;
+      color: #71ac5d;
+      font-weight: 600;
+    }
+  }
+}

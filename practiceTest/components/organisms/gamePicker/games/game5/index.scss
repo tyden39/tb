@@ -1,0 +1,294 @@
+.pt-o-game-5 {
+  &__container {
+    width: 100%;
+    max-width: 117vh;
+    height: 100%;
+    margin: auto;
+
+    .pt-o-block-bottom-gradient-with-header {
+      overflow: hidden;
+
+      &::before {
+        z-index: 2;
+      }
+
+      &__header {
+        & > .__heading {
+          color: $white;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
+      }
+
+      &__content {
+        & > div {
+          & > div {
+            &:nth-child(1) {
+              padding: 0 8.8rem 0 0;
+              color: $gunPowder;
+              font-family: "mont_m";
+              font-size: 2rem;
+              line-height: 4rem;
+
+              & > .__content {
+                & > .__space {
+                  height: 4rem;
+                  padding: 0 0 0 12.3rem;
+                  margin: 0 0.5rem;
+                  border-bottom: 0.2rem solid $cornflower;
+                  cursor: pointer;
+                  position: relative;
+                  text-align: center;
+                  text-decoration: underline;
+
+                  &::after {
+                    width: 1.6rem;
+                    height: 0.8rem;
+                    clip-path: polygon(0 0, 50% 100%, 100% 0);
+                    background: $dodgerBlue;
+                    content: "";
+                    display: inline-block;
+                    transform: translateY(-50%);
+                  }
+
+                  &.--inline {
+                    padding: 0 1rem 0 0;
+                    margin: 0;
+                    color: $dodgerBlue;
+
+                    &:after {
+                      transform: translate(1rem, -50%);
+                    }
+                  }
+
+                  &.--success {
+                    color: $limeGreen;
+
+                    &:after {
+                      opacity: 0.3;
+                    }
+                  }
+
+                  &.--danger {
+                    color: $salmon;
+
+                    &:after {
+                      opacity: 0.3;
+                    }
+                  }
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              & > div {
+                background: $pattensBlue !important;
+              }
+            }
+          }
+        }
+      }
+
+      .__drawer {
+        width: 60%;
+        max-width: 63.4rem;
+        height: auto;
+        max-height: 0;
+        padding: 1.2rem 1.6rem;
+        background: $white;
+        border-radius: 2.4rem 2.4rem 0 0;
+        box-shadow: 0 0 2.4rem rgba($color: $tropicalBlue, $alpha: 0.4);
+        overflow: auto;
+        position: absolute;
+        bottom: -2.4rem;
+        left: 50%;
+        z-index: 1000;
+        transform: translateX(-50%);
+        transition: max-height 0.25s ease-in-out;
+
+        &.--show {
+          max-height: 60%;
+          bottom: 0;
+        }
+
+        &::-webkit-scrollbar {
+          width: 0.8rem;
+
+          &-track {
+            background: transparent;
+          }
+
+          &-thumb {
+            background: $pattensBlue;
+            border-radius: 0.4rem;
+          }
+        }
+
+        &-item {
+          min-height: 4.4rem;
+          margin: 0 0 1rem 0;
+          border-radius: 0.8rem;
+          color: $gunPowder;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "mont_sb";
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          text-align: center;
+          transition: background 0.25s ease-in-out;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &.--active {
+            background: $dodgerBlue;
+            color: $white;
+
+            &:hover {
+              background: $dodgerBlue;
+            }
+          }
+
+          &:hover {
+            background: $pattensBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:1024px) and (max-width: 1366px) {
+  .pt-o-game-5 {
+    &__container {
+      height: calc(100vh - 30rem);
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          border: 1px soild green;
+          height: unset !important;
+          & > .__heading {
+            font-size: 2.4rem;
+          }
+        }
+        &__content {
+          // height: 90% !important;
+          padding: 1rem 2rem;
+          bottom: 2.4rem;
+          border-radius: 0;
+          box-shadow: unset;
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0;
+                font-size: 2.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width:768px) and (max-width: 1024px) {
+  .pt-o-game-5 {
+    &__container {
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          height: unset !important;
+          & > .__heading {
+            font-size: 2rem;
+          }
+        }
+        &__content {
+          padding: 1rem 2rem;
+          top: 7rem;
+          border-radius: 0;
+          box-shadow: unset;
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0;
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .pt-o-game-5 {
+    &__container {
+      height: calc(100vh);
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          height: unset !important;
+          & > .__heading {
+            font-size: 1.4rem;
+          }
+        }
+        &__content {
+          padding: 1rem 2rem;
+          top: 1rem;
+          left: unset;
+          bottom: unset;
+          position: relative;
+          width: 100%;
+          border-radius: 0;
+          box-shadow: unset;
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation:portrait) {
+  .pt-o-game-5 {
+    &__container {
+      .pt-o-block-bottom-gradient-with-header {
+        &__header {
+          height: unset !important;
+          & > .__heading {
+            font-size: 1.4rem;
+          }
+        }
+        &__content {
+          height: unset;
+          padding: 1rem 2rem;
+          top: 1rem;
+          left: unset;
+          bottom: unset;
+          position: relative;
+          width: 100%;
+          border-radius: 0;
+          box-shadow: unset;
+          & > div {
+            & > div {
+              &:nth-child(1) {
+                padding: 0;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

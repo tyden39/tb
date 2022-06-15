@@ -1,0 +1,375 @@
+.pt-o-game-12 {
+    height: 100%;
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &>.__paper {
+            width: 64.2rem;
+            height: 100%;
+            margin: 0 auto;
+            font-size: 2rem;
+            line-height: 3.2rem;
+            position: relative;
+            &.--hidden {
+                display: none;
+            }
+            &>.__toggle {
+                width: 1.6rem;
+                height: 1.6rem;
+                cursor: pointer;
+                position: absolute;
+                top: 1.8rem;
+                right: 3.6rem;
+                z-index: 2;
+                transform: rotate(45deg);
+            }
+            .__pin.--right {
+                display: none;
+            }
+            .__content {
+                u {
+                    text-decoration: underline !important;
+                }
+                i {
+                    font-style: italic !important;
+                }
+                b {
+                    font-weight: bold !important;
+                }
+            }
+        }
+        &>.__left {
+            width: 42vh;
+            max-width: 38rem;
+            height: 42vh;
+            max-height: 38rem;
+            border-radius: 14vh 0 0 14vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            &>.__player {
+                width: 12.8rem;
+                height: 12.8rem;
+            }
+            &>.__duration {
+                color: $dodgerBlue;
+                font-family: 'mont_sb';
+                font-size: 2.8rem;
+                line-height: 3.4rem;
+                position: absolute;
+                bottom: 2.4rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &>.__right {
+            width: calc(100% - 42vh);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            &>.__tapescript {
+                min-width: 17.6rem;
+                height: 4.6rem;
+                background: linear-gradient($deepSkyBlue, $dodgerBlue);
+                border-radius: 2.3rem;
+                color: $white;
+                font-family: 'mont_b';
+                font-size: 1.8rem !important;
+                position: absolute;
+                bottom: 1.2rem;
+                left: max(-21vh, -19rem);
+                transform: translateX(-50%);
+                &:active {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                &::before {
+                    width: 17.6rem;
+                    height: 4.6rem;
+                    background: $deepSkyBlue;
+                    border-radius: 2.3rem;
+                    color: $white;
+                    content: 'Tapescript';
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'mont_b';
+                    font-size: 1.8rem;
+                    opacity: 0;
+                    pointer-events: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            &>.__header {
+                padding: 2.4rem 6.4rem 2.4rem 6.4rem;
+                text-align: center;
+                &>.__heading {
+                    color: $gunPowder;
+                    font-family: 'mont_m';
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                }
+            }
+            &>.__content {
+                margin-bottom: 1.2rem;
+                flex: 1;
+                background: url('/pt/images/backgrounds/bg-game-1.png');
+                background-size: cover;
+                background-position: center center;
+                .__list {
+                    width: 44rem;
+                    margin: 6.4vh auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    &.--list-mr3 {
+                        width: 100%;
+                    }
+                    &.--lg {
+                        width: 54rem;
+                    }
+                    &>.__checkbox-item {
+                        width: 12rem;
+                        height: 9rem;
+                        margin: 0 0 1.6rem 0;
+                        animation-duration: 150ms;
+                        cursor: pointer;
+                        &:hover {
+                            &>.__container {
+                                background: $pattensBlue;
+                                &::before,
+                                &::after {
+                                    background: $pattensBlue;
+                                }
+                            }
+                        }
+                        &.--shake {
+                            animation: game-checkbox-shake 150ms 2 linear;
+                        }
+                        &.--mr3 {
+                            width: calc(50% - 8rem);
+                            margin: 4px 4rem 2.6rem 4rem;
+                        }
+                        &.--down {
+                            margin: 4.5rem 0 -4.5rem 0;
+                        }
+                        &.--up {
+                            margin: -4.5rem 0 4.5rem 0;
+                        }
+                        &.--checked {
+                            &>.__container {
+                                background: $dodgerBlue;
+                                box-shadow: inset 0 0.6rem 0.6rem rgba($color: $black, $alpha: 0.25);
+                                transform: translateY(0.6rem);
+                                &::before {
+                                    box-shadow: inset 1.2rem -0.6rem 0.6rem rgba($color: $black, $alpha: 0.25);
+                                }
+                                &::after {
+                                    box-shadow: inset -0.6rem 1.2rem 0.6rem rgba($color: $black, $alpha: 0.25);
+                                }
+                                &::before,
+                                &::after {
+                                    background: $dodgerBlue;
+                                }
+                                &>.__text {
+                                    color: $white;
+                                }
+                            }
+                        }
+                        &.--danger {
+                            &>.__container {
+                                &>.__text {
+                                    color: $salmon;
+                                }
+                            }
+                        }
+                        &.--success {
+                            &>.__container {
+                                &>.__text {
+                                    color: $limeGreen;
+                                }
+                            }
+                        }
+                        &>.__container,
+                        &>.__shadow {
+                            height: 100%;
+                            margin: 0 auto;
+                            background: $white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            z-index: 2;
+                            transition: all 0.25s ease-in-out;
+                            &::before,
+                            &::after {
+                                width: 6.66rem;
+                                height: 6.66rem;
+                                background: $white;
+                                border-radius: 0.6rem;
+                                content: '';
+                                position: absolute;
+                                top: 1.135rem;
+                                z-index: 1;
+                                transform: scaleX(0.5) rotate(45deg);
+                                transition: all 0.25s ease-in-out;
+                            }
+                            &::before {
+                                left: -3.35rem;
+                            }
+                            &::after {
+                                right: -3.35rem;
+                            }
+                            &>.__text {
+                                color: $dodgerBlue;
+                                font-family: 'mont_sb';
+                                font-size: 1.6rem;
+                                line-height: 2rem;
+                                position: relative;
+                                z-index: 2;
+                            }
+                        }
+                        &>.__shadow {
+                            z-index: 1;
+                            background: $dodgerBlue;
+                            transform: translateY(calc(-100% + 0.6rem));
+                            &::before,
+                            &::after {
+                                background: $dodgerBlue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop-md {
+    .pt-o-game-12 {
+        &__container {
+            &>.__right {
+                &>.__content {
+                    .__list {
+                        margin: 3.2vh auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop-sm {
+    .pt-o-game-12 {
+        &__container {
+            &>.__right {
+                &>.__content {
+                    .__list {
+                        margin: 1.6vh auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .pt-o-game-12 {
+        &__container {
+            flex-direction: column;
+            & > .__left {
+                width: 100%;
+                height: 25%;
+                max-width: unset;
+                max-height: unset;
+                border-radius: unset;
+                flex-direction: column;
+                overflow: unset;
+                & > .__player {
+                    width: 7rem;
+                    height: 7rem;
+                }
+
+                & > .__duration {
+                    position: relative;
+                    bottom: 0;
+                    transform: unset;
+                    left: unset;
+                    font-size: 2rem;
+                }
+            }
+            & > .__right {
+                width: 100%;
+                height: 100%;
+                & > .__header {
+                    padding: 0.5rem 1rem;
+                    & > .__heading {
+                        font-size: 1.4rem;
+                    }
+                }
+                & > .__content {
+                    .__list {
+                        // width: 23rem;
+                        padding-bottom: 5rem;
+                        & > .__checkbox-item {
+                            // margin: 0 0 1.4rem 0;
+                            width: calc(100% - 4rem);
+                            // width: 6.4rem;
+                            // height: 6.8rem;
+                            // &.--down {
+                            //     margin: 3rem 1.4rem -4.5rem 1.4rem;
+                            // }
+                            // &.--up {
+                            //     margin: 2rem 1.4rem 4.5rem 1.4rem;
+                            // }
+                            & > .__container,
+                            &>.__shadow 
+                            {
+                                // &::before,
+                                // &::after {
+                                //     width: 4.66rem;
+                                //     height: 4.66rem;
+                                //     background: $white;
+                                //     border-radius: 0.2rem;
+                                //     content: '';
+                                //     position: absolute;
+                                //     top: 1.135rem;
+                                //     z-index: 1;
+                                //     transform: scaleX(0.5) rotate(45deg);
+                                //     transition: all 0.25s ease-in-out;
+                                //     // border: 2px solid green;
+                                // }
+                                // &::before {
+                                //     left: -2.35rem;
+                                // }
+                                // &::after {
+                                //     right: -2.35rem;
+                                // }
+                                // & > .__text {
+                                //     font-size: 1.2rem;
+                                // }
+                            }
+                            &>.__shadow {
+                                // z-index: 1;
+                                // background: $dodgerBlue;
+                                // transform: translateY(calc(-100% + 0.6rem));
+                                // &::before,
+                                // &::after {
+                                //     background: $dodgerBlue;
+                                // }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

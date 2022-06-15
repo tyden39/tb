@@ -1,0 +1,88 @@
+.m-template-true-false {
+    margin: 16px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D5DEE8;
+    font-size: 14px;
+    line-height: 22px;
+
+    &__instruction{
+        margin-left: 8px;
+        margin-bottom: 9px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: -0.20000000298023224px;
+        text-align: left;
+        color: #374352;
+    }
+
+    &__question-container {
+        display: flex;
+
+        div {
+            flex: 1;
+            padding-left: 8px;
+        }
+
+        &__question {
+            &__audio-mode{
+                background-color: #E6F6FC;
+                padding: 35px;
+                text-align: center;
+
+                img {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                img {
+                    margin-bottom: 1px;
+                    margin-right: 7px;
+                }
+            }
+
+            &__paragraph-mode {
+                background-color: #E6F6FC;
+                padding: 16px 11px 17px 8px;
+            }
+        }
+
+        &__answer{
+            li {
+                display: flex;
+                border-width: 0 1px;
+                border-style: solid;
+                border-color: #D5DEE8;
+    
+                &:first-child {
+                    background-color: #5CB9D8;
+                    color: white;
+                    font-weight: 500;
+                    border-width: 0;
+                    border-radius: 8px 8px 0 0;
+                }
+    
+                &:last-child {
+                    border-bottom: 1px solid #D5DEE8;
+                    border-radius: 0 0 8px 8px;
+                }
+    
+                span {
+                    padding: 11px 16px;
+                    
+                    &:nth-child(1){
+                        flex: 1;
+                        text-align: left;
+                    }
+    
+                    &:nth-child(2){
+                        flex: 0 101px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

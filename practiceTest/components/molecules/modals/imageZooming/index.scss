@@ -1,0 +1,121 @@
+.pt-m-image-zooming {
+  width: 100%;
+  margin: 0 auto;
+
+  &__backdrop {
+    background: rgba($color: $black, $alpha: 0.8);
+    opacity: 1 !important;
+  }
+
+  &__dialog {
+    width: 100%;
+    height: 100vh;
+
+    .rs-modal {
+      &-content {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: transparent;
+
+        .__body {
+          height: 100%;
+          max-height: unset !important;
+          margin: 0;
+          padding: 0;
+          position: relative;
+
+          & > .__close {
+            width: 3.2rem;
+            height: 3.2rem;
+            padding: 0;
+            background: rgba($color: $black, $alpha: 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 6.4rem;
+            right: 5.2rem;
+            z-index: 1;
+
+            & > .__image {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+
+          & > .__main {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+
+          .__bottom-control {
+            width: 100%;
+            height: 3.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 7.4rem;
+            left: 0;
+
+            & > .__scale {
+              &-down,
+              &-up {
+                width: 3.2rem;
+                height: 3.2rem;
+                padding: 0;
+                background: rgba($color: $black, $alpha: 0.5);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & > .__image {
+                  width: 1.6rem;
+                  height: 1.6rem;
+                }
+              }
+            }
+
+            & > .__slider {
+              width: 28.4rem;
+              margin: 0 1.2rem;
+
+              .rs-slider {
+                &-bar {
+                  height: 1.2rem;
+                  padding: 0.2rem;
+                  background: rgba($color: $black, $alpha: 0.5);
+                  border-radius: 0.6rem;
+                }
+
+                &-progress-bar {
+                  height: 0.8rem;
+                  background: $dodgerBlue;
+                  border-radius: 0.4rem;
+                  position: static;
+                }
+
+                &-handle {
+                  &::before {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    margin: 0;
+                    background: $dodgerBlue;
+                    border: none;
+                    box-shadow: 0 0.3rem 0.6rem rgba($color: $black, $alpha: 0.16);
+                    transform: translate(-50%, 25%);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

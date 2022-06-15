@@ -1,0 +1,61 @@
+.o-coming-soon {
+  height: 100%;
+  height: 100%;
+  padding: 3.2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__banner {
+    width: 32rem;
+    height: 20rem;
+    margin: 0 0 3.2rem 0;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__title {
+    margin: 0 0 0.8rem 0;
+
+    color: #374352;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.06rem;
+    line-height: 3.2rem;
+    text-align: center;
+  }
+
+  &__description {
+    width: 40rem;
+    margin: 0 0 1.6rem 0;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    text-align: center;
+  }
+
+  &__button {
+    min-width: 20rem;
+    height: 4.8rem;
+    padding: 0 1.6rem;
+
+    background: #6262bc;
+    border-radius: 1.2rem;
+
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #6262bc;
+
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.m-unittest-mr-1 {
+  width: 100%;
+
+  &__listquestion {
+    display: block;
+    align-items: flex-start;
+    justify-content: left;
+  }
+
+  &__line {
+    border: 0.1rem solid $gray;
+    opacity: 0.5;
+    margin: 1.4rem 1.6rem;
+  }
+}

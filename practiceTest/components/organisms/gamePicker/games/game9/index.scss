@@ -1,0 +1,713 @@
+.pt-o-game-9 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+
+  &.--transparent {
+    opacity: 0;
+  }
+  &.--text {
+    display: flex;
+
+    .pt-o-game-9 {
+      &__left {
+        width: 33%;
+        padding: 3.2rem 0;
+
+        .__content {
+          color: $nightRider;
+          font-family: "mont_m";
+          font-size: 1.8rem;
+        }
+      }
+
+      &__right {
+        width: 63%;
+      }
+    }
+  }
+
+  &.--audio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > .__paper {
+      width: 64.2rem;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      position: relative;
+
+      &.--hidden {
+        display: none;
+      }
+
+      & > .__toggle {
+        width: 1.6rem;
+        height: 1.6rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.8rem;
+        right: 3.6rem;
+        z-index: 2;
+        transform: rotate(45deg);
+      }
+
+      .__pin.--right {
+        display: none;
+      }
+
+      .__content {
+        u {
+          text-decoration: underline !important;
+        }
+
+        i {
+          font-style: italic !important;
+        }
+
+        b {
+          font-weight: bold !important;
+        }
+      }
+    }
+
+    .pt-o-game-9 {
+      &__left {
+        width: 42vh;
+        max-width: 38rem;
+        height: 42vh;
+        max-height: 38rem;
+        border-radius: 14vh 0 0 14vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+
+        & > .__player {
+          width: 12.8rem;
+          height: 12.8rem;
+        }
+
+        & > .__duration {
+          color: $dodgerBlue;
+          font-family: "mont_sb";
+          font-size: 2.8rem;
+          line-height: 3.4rem;
+          position: absolute;
+          bottom: 2.4rem;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &__right {
+        width: 63%;
+        margin: 0;
+        position: relative;
+
+        & > .__tapescript {
+          min-width: 17.6rem;
+          height: 4.6rem;
+          background: linear-gradient($deepSkyBlue, $dodgerBlue);
+          border-radius: 2.3rem;
+          color: $white;
+          font-family: "mont_b";
+          font-size: 1.8rem !important;
+          position: absolute;
+          bottom: 1.2rem;
+          left: max(-21vh, -19rem);
+          transform: translateX(-50%);
+
+          &:active {
+            &::before {
+              opacity: 1;
+            }
+          }
+
+          &::before {
+            width: 17.6rem;
+            height: 4.6rem;
+            background: $deepSkyBlue;
+            border-radius: 2.3rem;
+            color: $white;
+            content: "Tapescript";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "mont_b";
+            font-size: 1.8rem;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    width: 82.8rem;
+    height: 100%;
+    margin: 0 auto;
+    background: $white;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease-in-out;
+    transition-delay: 0.25s;
+
+    & > .__header {
+      padding: 1.6rem 3.2rem;
+      background: linear-gradient($mayaBlue, $dodgerBlue);
+      border-radius: 1.2rem 1.2rem 0 0;
+      color: $white;
+      font-family: "mont_m";
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      position: relative;
+      text-align: center;
+    }
+
+    & > .__content {
+      padding: 3.2rem 1.6rem;
+      flex: 1;
+
+      & > div {
+        & > div:nth-child(3) {
+          & > div {
+            background: $pattensBlue !important;
+          }
+        }
+
+        & > div:nth-child(1) {
+          padding-right: 1.6rem;
+          display: flex;
+          justify-content: space-between;
+
+          & > .__left {
+            width: 47%;
+
+            & > .__tag {
+              height: 8rem;
+              margin: 0 0 1.2rem 0;
+              padding: 0.9rem 1.2rem;
+              background: $white;
+              border: 0.2rem solid $pattensBlue;
+              border-radius: 0.6rem;
+              color: $gunPowder;
+              display: flex;
+              align-items: center;
+              font-family: "mont_m";
+              line-height: 2.4rem;
+              position: relative;
+              transition: all 0.25s ease-in-out;
+
+              &.--matched {
+                margin: 0 -6% 1.2rem 6%;
+                border: 0.4rem solid $dodgerBlue;
+                color: $dodgerBlue;
+
+                &::after {
+                  border: 0.4rem solid $dodgerBlue;
+                  transform: translate(51%, -50%);
+                }
+              }
+
+              &.--danger {
+                margin: 0 -6% 1.2rem 6%;
+                border: 0.4rem solid $salmon;
+                color: $salmon;
+
+                &::after {
+                  border: 0.4rem solid $salmon;
+                  transform: translate(51%, -50%);
+                }
+              }
+
+              &.--success {
+                margin: 0 -6% 1.2rem 6%;
+                border: 0.4rem solid $limeGreen;
+                color: $limeGreen;
+
+                &::after {
+                  border: 0.4rem solid $limeGreen;
+                  transform: translate(51%, -50%);
+                }
+              }
+
+              &::after {
+                width: 3.2rem;
+                height: 3.2rem;
+                background: $white;
+                border: 0.2rem solid $pattensBlue;
+                border-radius: 50%;
+                clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+                transition: border 0.25s ease-in-out;
+              }
+            }
+          }
+
+          & > .__right {
+            width: 47%;
+
+            .__item {
+              width: calc(100% - 3.2rem);
+              height: 8rem;
+              margin: 0 0 1.2rem 3.2rem;
+
+              & > .__tag {
+                height: 8rem;
+                padding: 0.9rem 1.2rem 0.9rem 0;
+                background: $white;
+                border: 0.2rem solid $lightSkyBlue;
+                border-left: none;
+                border-radius: 0 0.6rem 0.6rem 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                transition: all 0.25s ease-in-out;
+
+                &.--dragging,
+                &:hover {
+                  border-color: $dodgerBlue;
+
+                  & > .__circle {
+                    &::before,
+                    &::after {
+                      background: $dodgerBlue;
+                    }
+
+                    & > span {
+                      border-color: $dodgerBlue;
+
+                      &::before {
+                        border-color: $dodgerBlue;
+                      }
+                    }
+                  }
+                }
+
+                &.--matched {
+                  margin: 0 8% 0 -8%;
+                  border: 0.4rem solid $dodgerBlue;
+                  border-left: none;
+                  color: $dodgerBlue;
+
+                  & > .__circle {
+                    &::before,
+                    &::after {
+                      background: $dodgerBlue;
+                    }
+
+                    & > span {
+                      height: calc(100% + 0.8rem);
+                      border-top: 0.4rem solid $dodgerBlue;
+                      border-bottom: 0.4rem solid $dodgerBlue;
+                      transform: translateY(-0.4rem);
+
+                      &::before {
+                        border: 0.4rem solid $dodgerBlue;
+                      }
+                    }
+                  }
+                }
+
+                &.--danger {
+                  margin: 0 8% 0 -8%;
+                  border-color: $salmon;
+                  color: $salmon;
+
+                  & > .__circle {
+                    &::before,
+                    &::after {
+                      background: $salmon;
+                    }
+
+                    & > span {
+                      height: calc(100% + 0.8rem);
+                      border-top: 0.4rem solid $salmon;
+                      border-bottom: 0.4rem solid $salmon;
+                      transform: translateY(-0.4rem);
+
+                      &::before {
+                        border: 0.4rem solid $salmon;
+                      }
+                    }
+                  }
+                }
+
+                &.--success {
+                  margin: 0 8% 0 -8%;
+                  border: 0.4rem solid $limeGreen;
+                  border-left: none;
+                  color: $limeGreen;
+
+                  & > .__circle {
+                    &::before,
+                    &::after {
+                      background: $limeGreen;
+                    }
+
+                    & > span {
+                      height: calc(100% + 0.8rem);
+                      border-top: 0.4rem solid $limeGreen;
+                      border-bottom: 0.4rem solid $limeGreen;
+                      transform: translateY(-0.4rem);
+
+                      &::before {
+                        border: 0.4rem solid $limeGreen;
+                      }
+                    }
+                  }
+                }
+
+                & > .__circle {
+                  width: 3.2rem;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: -3.2rem;
+
+                  &::before,
+                  &::after {
+                    width: 0.2rem;
+                    height: calc(50% - 1.6rem);
+                    background: $lightSkyBlue;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    z-index: 2;
+                    transition: all 0.25s ease-in-out;
+                  }
+
+                  &::before {
+                    border-radius: 0.6rem 0 0 0;
+                    top: 0;
+                  }
+
+                  &::after {
+                    border-radius: 0 0 0 0.6rem;
+                    bottom: 0;
+                  }
+
+                  & > span {
+                    width: 3.3rem;
+                    height: calc(100% + 0.4rem);
+                    border-top: 0.2rem solid $lightSkyBlue;
+                    border-bottom: 0.2rem solid $lightSkyBlue;
+                    border-radius: 0.6rem 0 0 0.6rem;
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
+                    transform: translateY(-0.2rem);
+                    transition: all 0.25s ease-in-out;
+
+                    &::before {
+                      width: 3.3rem;
+                      height: 3.2rem;
+                      border: 0.2rem solid $lightSkyBlue;
+                      border-radius: 1.6rem;
+                      box-shadow: 0 0 0 4.8rem $white;
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 50%;
+                      right: 0;
+                      transform: translate(-50%, -50%);
+                      transition: all 0.25s ease-in-out;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pt-o-game-9 {
+    margin: -1rem 0rem;
+    &__right {
+      width: 100%;  
+      & > .__content {
+        padding: 1rem 1.6rem;
+        & > div {
+          padding: 2rem 0;
+          & > div:nth-child(1) {
+            & > .__left {
+              width: 47%;
+  
+              & > .__tag {
+                border: 1px solid $lightSkyBlue;
+                height: 5rem;
+                font-size: 1rem;
+                padding: 0.5rem;
+                line-height: unset;
+              }
+            }
+
+            & > .__right {
+              .__item {
+                height: 5rem;
+                & > .__tag {
+                  border: 0.2rem solid $lightSkyBlue;
+                  height: 5rem;
+                  font-size: 1.1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      & > .__header {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+      }
+    }
+    &.--text {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      .pt-o-game-9 {
+        &__left {
+          width: 100%;
+          padding: 1rem 0;
+        }
+        &__right {
+          width: 100%;
+          height: unset;
+          & > .__header {
+            font-size: 1.3rem;
+            padding: 0.8rem 1.6rem;
+          }
+          & > .__content {
+            padding: 0rem 1.6rem;
+            & > div {
+              padding: 2rem 0;
+              overflow: unset !important;
+              & > div:nth-child(1) {
+                position: unset !important;
+                padding-right: 0;
+                & > .__left {
+                  width: 47%;
+                  & > .__tag {
+                    height: 4.8rem;
+                    font-size: 1.1rem;
+                    &.--matched {
+                      margin: 0 -7% 1.2rem 6%;
+                      border: 0.3rem solid $dodgerBlue;
+                    }
+                  }
+                }
+    
+                & > .__right {
+                  .__item {
+                    height: 4.8rem;
+                    & > .__tag {
+                      height: 4.8rem;
+                      font-size: 1.1rem;
+                      &.--matched {
+                        margin: 0 8% 0 -8%;
+                        border: 0.3rem solid $dodgerBlue;
+                        border-left: none;
+                        color: $dodgerBlue;
+      
+                        & > .__circle {
+                          & > span {
+                            height: calc(100% + 0.6rem);
+                            border-top: 0.3rem solid $dodgerBlue;
+                            border-bottom: 0.3rem solid $dodgerBlue;
+                            transform: translateY(-0.3rem);
+      
+                            &::before {
+                              border: 0.3rem solid $dodgerBlue;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .pt-o-block-paper {
+        padding: 2rem 0rem 1rem 1rem;
+        &__container {
+          & > div {
+            height: unset;
+            overflow: unset;
+            & > div {
+              position: unset !important;
+              & > .__content {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.--audio {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      justify-content: unset;
+      .pt-o-game-9 {
+        &__left {
+          width: 100%;
+          padding: 2rem 0;
+          height: 10rem;
+          overflow: unset;
+          & > .__player {
+            width: 6.8rem;
+            height: 6.8rem;
+          }
+  
+          & > .__duration {
+            font-size: 1.4rem;
+            bottom: 0;
+          }
+        }
+        &__right {
+          width: 100%;
+          height: auto;
+          & > .__header {
+            font-size: 1.3rem;
+            padding: 0.8rem 1.6rem;
+          }
+          & > .__content {
+            padding: 0rem 1.6rem;
+            & > div {
+              padding: 2rem 0;
+              overflow: unset !important;
+              & > div:nth-child(1) {
+                position: unset !important;
+                padding-right: 0;
+                & > .__left {
+                  width: 47%;
+                  & > .__tag {
+                    height: 4.8rem;
+                    font-size: 1.1rem;
+                    &.--matched {
+                      margin: 0 -7% 1.2rem 6%;
+                      border: 0.3rem solid $dodgerBlue;
+                    }
+                    &.--danger {
+                      margin: 0 -6% 1.2rem 7%;
+                      border-color: $salmon;
+                      color: $salmon;
+    
+                      // & > .__circle {
+                      //   &::before,
+                      //   &::after {
+                      //     background: $salmon;
+                      //   }
+    
+                      //   & > span {
+                      //     height: calc(100% + 0.8rem);
+                      //     border-top: 0.4rem solid $salmon;
+                      //     border-bottom: 0.4rem solid $salmon;
+                      //     transform: translateY(-0.4rem);
+    
+                      //     &::before {
+                      //       border: 0.4rem solid $salmon;
+                      //     }
+                      //   }
+                      // }
+                    }
+                  }
+                }
+    
+                & > .__right {
+                  .__item {
+                    height: 4.8rem;
+                    & > .__tag {
+                      height: 4.8rem;
+                      font-size: 1.1rem;
+                      padding: 2px;
+                      &.--matched {
+                        margin: 0 8% 0 -8%;
+                        border: 0.3rem solid $dodgerBlue;
+                        border-left: none;
+                        color: $dodgerBlue;
+      
+                        & > .__circle {
+                          & > span {
+                            height: calc(100% + 0.6rem);
+                            border-top: 0.3rem solid $dodgerBlue;
+                            border-bottom: 0.3rem solid $dodgerBlue;
+                            transform: translateY(-0.3rem);
+      
+                            &::before {
+                              border: 0.3rem solid $dodgerBlue;
+                            }
+                          }
+                        }
+                      }
+                      &.--danger {
+                        margin: 0 8% 0 -8%;
+                        border-color: $salmon;
+                        color: $salmon;
+                        & > .__circle {
+                          &::before,
+                          &::after {
+                            background: $salmon;
+                          }
+      
+                          & > span {
+                            height: calc(100% + 0.6rem);
+                            border-top: 0.3rem solid $salmon;
+                            border-bottom: 0.3rem solid $salmon;
+                            transform: translateY(-0.3rem);
+      
+                            &::before {
+                              border: 0.3rem solid $salmon;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .pt-o-block-paper {
+        padding: 2rem 0rem 1rem 1rem;
+        &__container {
+          & > div {
+            height: unset;
+            overflow: unset;
+            & > div {
+              position: unset !important;
+              & > .__content {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

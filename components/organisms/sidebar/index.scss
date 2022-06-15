@@ -1,0 +1,97 @@
+.o-sidebar {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #6868ac;
+  box-shadow: 0 0.4rem 0.6rem -0.1rem rgb(0 0 0 / 10%), 0 0.2rem 0.4rem -0.1rem rgb(0 0 0 / 6%);
+
+  transition: padding 0.25s;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &[data-expand="false"] {
+    .o-sidebar {
+      &__toggle {
+        right: -1.6rem;
+
+        transform: rotate(180deg);
+      }
+
+      &__brand {
+        padding: 0 1.5rem;
+
+        .brand-logo {
+          clip-path: polygon(0 0, 3.6rem 0%, 3.6rem 100%, 0% 100%);
+        }
+      }
+
+      &__sidenav {
+        padding: 2.4rem 1.5rem 0 1.5rem;
+      }
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 2.4rem;
+    right: 2rem;
+
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f2f2f8;
+    border-radius: 0.8rem;
+    box-shadow: none !important;
+
+    transition: all 0.25s;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__brand {
+    height: 8.4rem;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    border-bottom: 0.1rem solid #d5dee8;
+
+    transition: width 0.25s;
+
+    .brand-logo {
+      width: 17.5rem;
+      height: 4.6rem;
+
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      object-fit: contain;
+      object-position: center;
+
+      transition: clip-path 0.25s;
+    }
+  }
+
+  &__sidenav {
+    height: calc(100vh - 8.4rem);
+    padding: 2.4rem 2rem 0 2rem;
+  }
+}

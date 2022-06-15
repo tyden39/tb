@@ -1,0 +1,164 @@
+.pt-m-card-grade {
+  height: 100%;
+  padding: 4.2rem 1.6rem 2.6rem 1.6rem;
+  border-radius: 1.2rem;
+  display: block;
+  position: relative;
+  transition: box-shadow 0.25s ease-in-out;
+
+  &.--disabled {
+    .pt-m-card-grade {
+      &__banner {
+        filter: grayscale(50%);
+        opacity: 0.5;
+      }
+
+      &__name {
+        color: $airForceBlue;
+      }
+
+      &__description {
+        color: $airForceBlue;
+      }
+
+      &__direction {
+        align-items: center;
+
+        & > .__text {
+          margin-right: 0;
+          color: $airForceBlue;
+        }
+
+        & > .__icon {
+          width: 2.4rem;
+          height: 2.4rem;
+          margin-left: 0.4rem;
+          transform: translateY(-25%);
+        }
+      }
+    }
+
+    &:hover {
+      .pt-m-card-grade {
+        &__backdrop {
+          &::before {
+            background: rgba($color: $white, $alpha: 0.5);
+          }
+        }
+
+        &__name {
+          color: $airForceBlue;
+        }
+
+        &__direction {
+          & > .__text {
+            font-family: "mont_m";
+          }
+
+          & > .__icon {
+            animation-name: unset;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0.8rem 1.2rem rgba($color: $tangaroa, $alpha: 0.1);
+
+    .pt-m-card-grade {
+      &__backdrop {
+        &::before {
+          background: $white;
+        }
+      }
+
+      &__name {
+        color: $dodgerBlue;
+        font-family: "mont_b" !important;
+      }
+
+      &__direction {
+        & > .__text {
+          font-family: "mont_b";
+        }
+
+        & > .__icon {
+          animation-name: card-grade-direction-icon;
+        }
+      }
+    }
+  }
+
+  &__backdrop {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      background: rgba($color: $white, $alpha: 0.5);
+      border-radius: 1.2rem;
+      content: "";
+      backdrop-filter: blur(4.5rem);
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: background 0.25s ease-in-out;
+    }
+  }
+
+  &__banner {
+    width: 10rem;
+    position: absolute;
+    top: -3.7rem;
+    left: 0;
+  }
+
+  &__name {
+    margin: 0 0 4.3rem 0;
+    color: $gunPowder;
+    font-family: "mont_sb" !important;
+    font-size: 2.4rem !important;
+    line-height: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &__direction {
+    width: 100%;
+    height: 1.4rem;
+    padding: 0 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+
+    & > .__text {
+      margin-right: 1.4rem;
+      color: $dodgerBlue;
+      font-family: "mont_m";
+      font-size: 1.3rem;
+    }
+
+    & > .__icon {
+      width: 1.3rem;
+      height: 1rem;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+    }
+  }
+}

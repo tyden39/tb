@@ -1,0 +1,23 @@
+.pt-t-wrapper {
+  width: 100%;
+  min-width: 1200px;
+  min-height: 600px;
+  padding: 9rem 0 0 0;
+
+  &#test {
+    overflow: hidden;
+  }
+
+  &.--no-header {
+    padding: 0;
+
+    .pt-t-wrapper__content {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+}

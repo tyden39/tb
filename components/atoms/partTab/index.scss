@@ -1,0 +1,57 @@
+.a-part-tab {
+  max-width: 20%;
+  padding-right: 3.6rem;
+  background: rgba($color: #1ab394, $alpha: 0.25);
+  border: none;
+  border-radius: 0 !important;
+  color: #666;
+  position: relative;
+  transition: color 0.25s;
+
+  &.--active {
+    background: #1ab394 !important;
+    color: #fff !important;
+
+    &:hover {
+      background: #1ab394 !important;
+      color: #fff;
+    }
+
+    .delete-btn {
+      color: #fff;
+    }
+  }
+
+  &::after {
+    width: 0.1rem;
+    height: 2.4rem;
+    background: #ccc;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    background: rgba($color: #1ab394, $alpha: 0.5) !important;
+  }
+
+  .delete-btn {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0;
+    box-shadow: none;
+    color: #666;
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transition: all 0.25s;
+    transform: translateY(-50%);
+
+    &:hover {
+      background: #d12f1d;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.m-multi-choice {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  table {
+    thead tr th {
+      &:nth-child(1) {
+        width: 110px;
+      }
+
+      &:nth-child(2) {
+        text-align: left;
+      }
+
+      &:nth-child(3) {
+        width: 80px;
+      }
+    }
+  }
+}

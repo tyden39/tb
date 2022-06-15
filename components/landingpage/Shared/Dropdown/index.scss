@@ -1,0 +1,106 @@
+.landing-dropdown {
+  color:white;  
+  text-align: right;
+  position: relative;
+
+  @include horizontal-tablet {
+    color:#D4D4ED;  
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    min-height: 2.6rem;
+    line-height: 2.6rem;
+
+    width: 100%;
+    text-align: left;
+  }
+
+  p {
+    @include horizontal-tablet {
+      padding: 2.4rem 2rem;
+    }
+    &:hover {
+      cursor: pointer;
+      @include horizontal-tablet {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      }
+    }
+  }
+
+  &__selected {
+    text-transform: uppercase;
+    @include horizontal-mobile {
+      font-size: 1.8rem;
+    }
+  
+    img {
+      margin-bottom: 3px;
+      margin-left: 5px;
+    }
+
+    &:hover {
+      @include horizontal-mobile {
+        color: white;
+      }
+    }
+  }
+
+  &__content {
+
+    background-color: white;
+    color: black;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 4px 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 3.5rem;
+    left: -2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    @include horizontal-tablet {
+      position: static;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+      box-shadow: unset;
+
+      // height: 0;
+      // padding: 1.6rem 0;
+      // overflow: hidden;
+      // transition: height .25s ease-in;
+    }
+
+    @include horizontal-mobile {
+      left: -0.5rem;
+    }
+
+    p {
+      line-height: 1.5em;
+      width: 4em;
+      margin: 0;
+      text-align: center;
+      @include horizontal-tablet {
+        width: auto;
+        padding: 2.4rem 2rem;
+        margin-left: 2rem;
+        text-align: left;
+        color: #D4D4ED;
+      }
+
+      &:hover {
+        @include horizontal-tablet {
+          background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+      }
+    }
+  }
+}
+
+.show-content {
+  @include horizontal-tablet {
+    height: 13.4rem;
+  }
+}

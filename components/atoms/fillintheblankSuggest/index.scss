@@ -1,0 +1,13 @@
+.a-fb-suggest {
+  width: 100%;
+
+  &__correct-answer {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: $green;
+  }
+}

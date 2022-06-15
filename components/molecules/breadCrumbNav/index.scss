@@ -1,0 +1,51 @@
+.m-breadcrumb-nav {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    position: relative;
+
+    margin: 0 1rem 0 0;
+    padding: 0 0 0 1.4rem;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    &:first-child {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 0.4rem;
+      height: 0.8rem;
+
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+
+      background: #738498;
+
+      content: "";
+
+      transform: translateY(-50%);
+    }
+
+    a {
+      color: #374352;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+
+    span {
+      color: #738498;
+    }
+  }
+}

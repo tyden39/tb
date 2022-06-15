@@ -1,0 +1,62 @@
+.a-preview-question-card {
+  min-height: 20rem;
+  margin: 0 0 1.6rem 0;
+  padding: 1.6rem 4.8rem 1.6rem 1.6rem;
+  background: rgba($color: $success, $alpha: 0.1);
+  position: relative;
+
+  .__edit-toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    transition: color 0.25s;
+
+    &:hover {
+      color: $success;
+    }
+  }
+
+  .__question {
+    margin: 0 0 1.6rem 0;
+    padding: 0 0 0 4.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 3.2rem;
+    position: relative;
+
+    &[data-index]::before {
+      width: 3.2rem;
+      height: 3.2rem;
+      background: $success;
+      color: $white;
+      content: attr(data-index);
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
+  }
+
+  .__answers {
+    padding: 0 0 0 4.2rem;
+
+    .__answer-item {
+      margin: 0 0 1.6rem 0;
+      display: flex;
+
+      input {
+        margin: 0 1.6rem 0 0;
+      }
+    }
+
+    .__text {
+      font-size: 1.6rem;
+
+      .__result {
+        color: $success;
+        font-weight: bold;
+      }
+    }
+  }
+}

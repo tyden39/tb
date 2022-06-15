@@ -1,0 +1,72 @@
+.pt-o-block-paper {
+  width: 100%;
+  height: 100%;
+  padding: 8vh 3.6rem 10vh 3.6rem;
+  position: relative;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+
+    & > div {
+      & > div {
+        &:nth-child(1) {
+          padding: 0 1.6rem 0 0;
+
+          p {
+            line-height: 3.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  & > .__paper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    & > .__paper-image {
+      width: 100%;
+      height: 100%;
+      padding-top: 0 !important;
+    }
+  }
+
+  & > .__pin {
+    width: 5.1rem;
+    height: 5.9rem;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    & > .__pin-image {
+      width: 100%;
+      height: 100%;
+      padding-top: 0 !important;
+    }
+
+    &.--left {
+      left: 3.6rem;
+      transform: translate(-25%, -35%);
+    }
+
+    &.--right {
+      right: 3.6rem;
+      transform: translate(50%, -35%);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pt-o-block-paper {
+    & > .__pin {
+      width: 3.1rem;
+    }
+  }
+}
